@@ -1,0 +1,23 @@
+<ion-content>
+    <div class="img"><img src="../../assets/imgs/logo.png" alt="食途"></div>
+    <div class="box">
+        <ion-list>
+            <ion-item>
+                <ion-icon ios="ios-person" md="md-person" item-start></ion-icon>
+                <ion-input no-lines type="number" placeholder="手机号/邮箱"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="md-lock" item-start></ion-icon>
+                <ion-input type="password" placeholder="密码"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button block color="tom" (click)='goTabs()'>登录</button>
+        <span (click)='goReg()'>没有账号？立即注册</span>
+        <span class="second" (click)='goPas()'>忘记密码？</span>
+    </div>
+    <!-- <ul>
+      <li><img src="../../assets/imgs/chat.png"></li>
+      <li><img src="../../assets/imgs/QQ.png"></li>
+      <li><img src="../../assets/imgs/mes.png"></li>
+  </ul> -->
+</ion-content>

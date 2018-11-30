@@ -5,14 +5,73 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>person</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <img src="../../assets/imgs/bg0.png" alt="">
+        <div class='cover'>
+            <img src="../../assets/imgs/ali.jpg" alt="" (click)='goData()'>
+            <p>阿狸</p>
+            <!-- {{}} -->
+        </div>
+    </ion-navbar>
 </ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4 (click)='goWork()'>
+                <span><ion-img src="../../assets/imgs/cook.png"></ion-img></span>
+                <p>我的作品</p>
+            </ion-col>
+            <ion-col col-4 (click)='goFollow()'>
+                <span><ion-img src="../../assets/imgs/focus.png"></ion-img></span>
+                <p>我的关注</p>
+            </ion-col>
+            <ion-col col-4 (click)='goFans()'>
+                <span><ion-img src="../../assets/imgs/people.png"></ion-img></span>
+                <p>我的粉丝</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 (click)='goCollect()'>
+                <span><ion-img src="../../assets/imgs/star.png"></ion-img></span>
+                <p>收藏</p>
+            </ion-col>
+            <ion-col col-4 (click)='goLook()'>
+                <span><ion-img src="../../assets/imgs/eye.png"></ion-img></span>
+                <p>看过</p>
+            </ion-col>
+            <ion-col col-4 (click)='goLike()'>
+                <span><ion-img src="../../assets/imgs/like.png"></ion-img></span>
+                <p>喜欢</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item detail-push (click)='goSet()'>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/setting.png">
+            </ion-avatar>
+            我的设置
+        </ion-item>
+        <ion-item detail-push (click)='goEdit()'>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/about.png">
+            </ion-avatar>
+            关于版本
+        </ion-item>
+        <ion-item detail-push>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/clear.png">
+            </ion-avatar>
+            清除缓存
+            <div item-content>
+                666.6KB
+            </div>
+        </ion-item>
+        <ion-item detail-push (click)='goUs()'>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/about_us.png">
+            </ion-avatar>
+            关于我们
+        </ion-item>
+    </ion-list>
 </ion-content>

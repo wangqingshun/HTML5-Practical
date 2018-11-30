@@ -1,0 +1,25 @@
+page-register {
+    ion-title {
+        margin-left: 30%
+    }
+    ion-content {
+        background: url(../../assets/imgs/bg.jpg);
+        background-size: cover;
+        .box {
+            ion-item {
+                background: transparent;
+            }
+            button {
+                color: #fff;
+                margin-top: 50px;
+            }
+            p {
+                color: #fff!important;
+                text-align: center;
+            }
+        }
+        ion-radio {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+page-login {
+    ion-content {
+        background: url(../../assets/imgs/bg2.jpg);
+        background-size: cover;
+        .img {
+            text-align: center;
+            margin: 15% 0;
+        }
+        img {
+            width: 100px;
+        }
+        .box {
+            ion-item {
+                background: transparent;
+            }
+        }
+        span {
+            line-height: 30px;
+            font-size: 15px;
+            //margin: 0 5%;
+        }
+        .second {
+            float: right;
+        }
+    }
+}

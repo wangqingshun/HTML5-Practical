@@ -1,3 +1,39 @@
 page-person {
-
+    ion-navbar {
+        position: relative;
+        height: 160px;
+        width: auto;
+        img {
+            display: block;
+        }
+        .cover {
+            position: absolute;
+            bottom: 12.5%;
+            right: 38%;
+            img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+            }
+            p {
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
+    ion-content {
+        ion-col {
+            height: 80px;
+            text-align: center;
+            border-radius: 3px;
+            ion-img {
+                width: 30px;
+                height: 30px;
+                background: #fff;
+            }
+        }
+        // img {
+        //     width: 20px;
+        // }
+    }
 }
