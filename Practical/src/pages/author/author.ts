@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthorPage } from '../author/author';
 
 /**
- * Generated class for the ArticlePage page.
+ * Generated class for the AuthorPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,20 @@ import { AuthorPage } from '../author/author';
 
 @IonicPage()
 @Component({
-  selector: 'page-article',
-  templateUrl: 'article.html',
+  selector: 'page-author',
+  templateUrl: 'author.html',
 })
-export class ArticlePage {
-
+export class AuthorPage {
+  isActive=0;
+  isClick(i){
+    this.isActive=i;
+  }
+  arr=["个人首页","个人作品"];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ArticlePage');
+    console.log('ionViewDidLoad AuthorPage');
   }
-  goAuthor(){
-    this.navCtrl.push(AuthorPage);
-  }
+
 }

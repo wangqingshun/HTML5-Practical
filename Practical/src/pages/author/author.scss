@@ -1,4 +1,4 @@
-page-article {
+page-author {
     ion-title{
         text-align: center;
     }
@@ -24,19 +24,21 @@ page-article {
             width: 250px;;
             margin-left: 10%;
         }
-        .name img{
-            height: 30px;
-            width: 30px;
+        button{
             float: right;
+            margin-right: 5%;
         }
     }
-    ion-item{
-        line-height: 50px;
-        img{
-            height: 25px;
-            width: 25px;
-            margin-left: 12%;
-            margin-top: 10%;
-        }
+    .banner{
+        list-style: none;
+    }
+    .banner li{
+        float: left;
+        margin-left: 18%;
+        font-size:20px;
+        margin-top: 2%;
+    }
+    .people{
+    border: 1px solid red; 
     }
 }

@@ -3,12 +3,13 @@ import { Platform ,ToastController, App, NavController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
+import { AuthorPage } from '../pages/author/author';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = LoginPage;
+  rootPage:any = AuthorPage;
 
   backButtonPressed = false;
   showExit(): void {
