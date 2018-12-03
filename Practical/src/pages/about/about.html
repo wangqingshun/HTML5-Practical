@@ -1,11 +1,42 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
+<ion-content>
+ <ul class="title">
+    <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
+  </ul>
+  <ion-searchbar placeholder="搜索"></ion-searchbar>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>
+  </ion-refresher>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+      <ul class="video">
+        <!-- <li *ngFor='let video of database' (click)="goVideo()">
+          <video src="{{video.video}}" controls="controls">
+            您的浏览器不支持 video 标签。
+          </video>
+        </li> -->
+        <li (click)="goVideo()"><img src="assets/imgs/a9.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="1">
+      <ul class="article">
+        <!-- <li *ngFor='let article of database' (click)="goArticle()">
+          <div class="artimg"><img src="{{article.img}}" alt=""></div>
+          <div class="artcon">
+            <h3>{{article.name}}</h3>
+            <p>{{article.content}}</p>
+          </div>
+        </li> -->
+        <li (click)="goArticle()">
+          <div class="artimg"><img src="assets/imgs/a9.jpg" alt=""></div>
+          <div class="artcon">
+            <h3>菜名</h3>
+            <p>内容简介</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="2">
+     
+    </div>
+  </div>
 </ion-content>
