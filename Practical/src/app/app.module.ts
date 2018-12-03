@@ -25,6 +25,11 @@ import { AboutUsPage } from '../pages/about-us/about-us';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { FindPasswordPage } from '../pages/find-password/find-password';
+import { MyPage } from '../pages/my/my';
+import { CommentPage } from '../pages/comment/comment';
+import { GoodPage } from '../pages/good/good';
+import { VideoPage } from '../pages/video/video';
+import { ArticlePage } from '../pages/article/article';
 
 @NgModule({
   declarations: [
@@ -34,6 +39,11 @@ import { FindPasswordPage } from '../pages/find-password/find-password';
     HomePage,
     TabsPage,
     PersonPage,
+    MyPage,
+    CommentPage,
+    GoodPage,
+    VideoPage,
+    ArticlePage,
     MyDataPage,
     WorksPage,
     FollowPage,
@@ -73,7 +83,12 @@ import { FindPasswordPage } from '../pages/find-password/find-password';
     AboutUsPage,
     LoginPage,
     RegisterPage,
-    FindPasswordPage
+    FindPasswordPage,
+    MyPage,
+    CommentPage,
+    GoodPage,
+    VideoPage,
+    ArticlePage,
   ],
   providers: [
     StatusBar,
