@@ -23,7 +23,9 @@ export class SettingPage {
   ionViewDidLoad() {
     //console.log('ionViewDidLoad SettingPage');
   }
-  goLogin(){
+  logout() {
+    window.localStorage.clear();
+    //this.navCtrl.setRoot(LoginPage);
     this.app.getRootNavs()[0].setRoot(LoginPage);
   }
   goData(){

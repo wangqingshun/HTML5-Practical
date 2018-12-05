@@ -24,11 +24,14 @@
             个人资料
         </ion-item>
         <ion-item detail-push>
-            消息设置
+            <ion-label>消息设置</ion-label>
+            <ion-toggle [(ngModel)]="news"></ion-toggle>
         </ion-item>
         <ion-item detail-push>
-            通知设置
+
+            <ion-label>通知设置</ion-label>
+            <ion-toggle [(ngModel)]="tips"></ion-toggle>
         </ion-item>
     </ion-list>
-    <button ion-button block color="tom" (click)='goLogin()'>退出登录</button>
+    <button ion-button block color="tom" (click)='logout()'>退出登录</button>
 </ion-content>

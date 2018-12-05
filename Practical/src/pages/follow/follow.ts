@@ -19,7 +19,7 @@ export class FollowPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FollowPage');
+    //console.log('ionViewDidLoad FollowPage');
   }
 
 }

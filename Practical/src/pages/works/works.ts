@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'works.html',
 })
 export class WorksPage {
-
+  public username:string;
+  ionViewWillEnter(){
+    this.username= window.localStorage.getItem('username');
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

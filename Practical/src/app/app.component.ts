@@ -3,13 +3,13 @@ import { Platform ,ToastController, App, NavController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
-import { AuthorPage } from '../pages/author/author';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AuthorPage;
+  rootPage:any;
 
   backButtonPressed = false;
   showExit(): void {
@@ -31,7 +31,12 @@ export class MyApp {
   }
   constructor(public appCtrl: App,
     public toastCtrl: ToastController,private platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
+      if(window.localStorage.getItem('username')) {
+        this.rootPage = TabsPage;
+      } else {
+        this.rootPage = LoginPage;
+      }
+      platform.ready().then(() => {
       statusBar.styleDefault();
       this.statusBar.backgroundColorByHexString('#f00');
       splashScreen.hide();

@@ -17,9 +17,10 @@ export class CollectionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CollectionPage');
+    //console.log('ionViewDidLoad CollectionPage');
   }
 
 }

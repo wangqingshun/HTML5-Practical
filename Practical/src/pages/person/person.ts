@@ -8,7 +8,7 @@ import { FansPage } from '../fans/fans';
 import { CollectionPage } from '../collection/collection';
 import { LookPage } from '../look/look';
 import { LikePage } from '../like/like';
-import { EditionPage } from '../edition/edition';
+//import { EditionPage } from '../edition/edition';
 import { AboutUsPage } from '../about-us/about-us';
 
 /**
@@ -24,7 +24,10 @@ import { AboutUsPage } from '../about-us/about-us';
   templateUrl: 'person.html',
 })
 export class PersonPage {
-
+  public username:string;
+  ionViewWillEnter(){
+    this.username= window.localStorage.getItem('username');
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   goData(){
@@ -51,9 +54,9 @@ export class PersonPage {
   goSet(){
     this.navCtrl.push(SettingPage);
   }
-  goEdit(){
-    this.navCtrl.push(EditionPage);
-  }
+  // goEdit(){
+  //   this.navCtrl.push(EditionPage);
+  // }
   goUs(){
     this.navCtrl.push(AboutUsPage);
   }

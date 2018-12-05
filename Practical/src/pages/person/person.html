@@ -1,28 +1,81 @@
-<style>
- #elem-container{
-   position: absolute;
-   left:     100px;
-   top:      200px;
-   height:   100px;
-   border:1px solid red;
- }
-</style>
+<!--
+  Generated template for the PersonPage page.
 
-<div id="elem-container">dummy</div>
-<div id="output"></div> 
-<input type="button" value="+关注" (click)="goChange()" id="input"> 
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <img src="../../assets/imgs/bg0.png" alt="">
+        <div class='cover'>
+            <img src="../../assets/imgs/ali.jpg" alt="" (click)='goData()'>
+            <p>{{username}}</p>
 
-<script>
-  // function getTheStyle(){
-  //   let elem = document.getElementById("elem-container");
-  //   let theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
-  //   document.getElementById("output").innerHTML = theCSSprop;
-
-    //  let elem = document.getElementById("input");
-    // let theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("已关注");
-    // document.getElementById("input").innerHTML = theCSSprop;
-
-    document.getElementById("input").value"="已关注";
-   // }
-  // getTheStyle();
-</script>
+        </div>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4 (click)='goWork()'>
+                <span><ion-img src="../../assets/imgs/cook.png"></ion-img></span>
+                <p>我的作品</p>
+            </ion-col>
+            <ion-col col-4 (click)='goFollow()'>
+                <span><ion-img src="../../assets/imgs/focus.png"></ion-img></span>
+                <p>我的关注</p>
+            </ion-col>
+            <ion-col col-4 (click)='goFans()'>
+                <span><ion-img src="../../assets/imgs/people.png"></ion-img></span>
+                <p>我的粉丝</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 (click)='goCollect()'>
+                <span><ion-img src="../../assets/imgs/star.png"></ion-img></span>
+                <p>收藏</p>
+            </ion-col>
+            <ion-col col-4 (click)='goLook()'>
+                <span><ion-img src="../../assets/imgs/eye.png"></ion-img></span>
+                <p>看过</p>
+            </ion-col>
+            <ion-col col-4 (click)='goLike()'>
+                <span><ion-img src="../../assets/imgs/like.png"></ion-img></span>
+                <p>喜欢</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item detail-push (click)='goSet()'>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/setting.png">
+            </ion-avatar>
+            我的设置
+        </ion-item>
+        <ion-item detail-push>
+            <!-- (click)='goEdit()' -->
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/about.png">
+            </ion-avatar>
+            关于版本
+            <div item-content>
+                版本号1.1.0
+            </div>
+        </ion-item>
+        <ion-item detail-push>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/clear.png">
+            </ion-avatar>
+            清除缓存
+            <div item-content>
+                666.6KB
+            </div>
+        </ion-item>
+        <ion-item detail-push (click)='goUs()'>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/about_us.png">
+            </ion-avatar>
+            关于我们
+        </ion-item>
+    </ion-list>
+</ion-content>

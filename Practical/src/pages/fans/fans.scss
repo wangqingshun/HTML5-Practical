@@ -1,3 +1,21 @@
 page-fans {
-
+    ion-title {
+        margin-left: 30%;
+    }
+    img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+    a {
+        color: black;
+        display: block;
+        text-decoration: none;
+    }
+    .it {
+        margin-top: 5%;
+        display: block;
+        width: 70%;
+        float: right;
+    }
 }
