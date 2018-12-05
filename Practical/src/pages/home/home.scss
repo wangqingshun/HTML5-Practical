@@ -1,3 +1,86 @@
 page-home {
+    ion-bar{
+        margin-left:160px;
+        ion-icon{
+            margin-left:60px;
+        }
+    }
+        .sli{
+            height:auto;
+            ion-silde{
+                border:1px solid red;
+                img{
+                    width:100%;
+                    height:220px;
+                }
+            }
+        }
 
+
+    .tj{
+        // border:1px solid gray;
+        margin:0;
+        span{
+            // border:1px solid;
+            margin-left:35%;
+            line-height:40px;
+            height:40px;
+            font-size: 20px;
+            letter-spacing:8px;
+        }
+        ion-icon{
+            // border:1px solid;
+            margin-top:6px;
+            margin-left:50px!important;
+
+        }
+    }
+    // .tjlist{
+    //     margin-top:240px;
+    // }
+    .tjlist,.tjlist1{
+        border-bottom:5px solid #f1f1f1;
+        //margin-bottom: 5px;
+        //background-color:#f1f1f1;
+        ion-row{
+            margin-top:10px;
+        }
+        img{
+            height:105px;
+            width:100%;
+        }
+       ion-col p{
+            text-align: center;
+        }
+    }
+    .change{
+        border:1px solid gray;
+        margin-left: 40%;
+        font-size:18px;
+        text-align: center;
+        width:88px;
+        height:30px;
+    }
+    .eat{
+        //border-bottom:1px solid gray;
+        margin-top:10px;
+        height:50px;
+        list-style: none;
+        padding-left:15%;
+        li{
+            float:left;
+            margin-top:10px;
+            margin-left:5px;
+        }
+        button{
+            font-size:20px;
+            background-color: #8bc34a;
+            width:90px;
+            height:30px;
+            border-radius: 5px;
+        }
+    }
+    .txt{
+        font-size:20px;
+    }
 }

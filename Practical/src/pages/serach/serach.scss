@@ -1,0 +1,14 @@
+page-serach {
+    ion-navbar{
+        ion-searchbar{
+            border-radius:50%;
+            width:230px;
+        }
+        span{
+            display:block;
+            float:right;
+            margin-top:-30px;
+            font-size:18px;
+        }
+    }
+}

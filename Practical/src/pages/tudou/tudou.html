@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title text-center>食材介绍</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class='tjlist'>
+        <ion-row>
+            <ion-col>
+                <img src="../assets/imgs/sc1.jpg"> 
+            </ion-col>
+            <ion-col>
+                <h5>食材简介</h5>
+                <p>土豆的学名是马铃薯，“土豆”是通称，个别地区叫洋芋，英文potato，在法国，土豆被称为“地下苹果”。</p>
+            </ion-col>                                         
+        </ion-row>
+    </ion-grid>
+
+    <ul class='navList'>
+        <li *ngFor='let item of arr;let idx=index' (click)='isClick(idx)' [class.first]='isActive==idx'>{{arr[idx]}}</li>
+    </ul>
+    <div [ngSwitch]='isActive'>
+      <div *ngSwitchCase="0">
+        <h5 color="#ff785e">营养价值</h5>
+        <p>土豆具有很高的营养价值和药用价值，其营养素丰富，含有蛋白质、矿物质(磷、钙等)、维生素等多种成分，营养结构也较合理，有“地下苹果”之称。</p>
+        <p>它所含的蛋白质和维生素C、维生素B1、维生素B2比苹果高得多：</p>
+        <p>1、维生素C是苹果的10倍。</p>
+        <p>2、B族维生素是苹果的4倍。</p>
+        <p>3、钙、磷、镁、钾含量是苹果的几倍至几十倍不等，尤其是钾的含量，可以说在蔬菜类里排第一位。</p>
+        <p>4、富含大量碳水化合物，能供给人体大量的热能。</p>
+        <p>5、土豆的皮富含绿原酸和硫辛酸。绿原酸有抗氧化和抗癌的功效，硫辛酸可淡斑、防止皮肤老化。</p>
+        <p>6、含有能够帮助预防老年疾病的膳食抗氧化剂以及有大量的优质纤维素，有预防便秘和防治癌症等作用。</p>
+        <h5>食用功效</h5>
+        <p>1、补充营养、可作主食：土豆含有丰富的维生素及钙、钾等微量元素，且易于消化吸收，营养丰富。</p>
+        <p>2、和中养胃、健脾利湿：土豆含有大量淀粉以及蛋白质、B族维生素、维生素C等，能促进脾胃的消化功能。</p>
+        <p>3、宽肠通便：土豆含有大量膳食纤维，能宽肠通便，帮助机体及时排泄代谢毒素，防止便秘。</p>
+        <p>4、降糖降脂、美容养颜：预防心血管和系统的脂肪沉积，保持血管的弹性，有利于预防动脉粥样硬化的发生。土豆同时又是一种碱性蔬菜，有利于体内酸碱平衡，中一定的美容、抗衰老作用。</p>
+        <p>5、利水消肿：土豆所含的钾能取代体内的钠，同时能将钠排出体外，有利于高血压和肾炎水肿患者的康复。</p>
+        <p>6、减肥：每148克土豆产生的热量仅为100卡路里，能有效控制人们日常饮食中脂肪总量的摄入。</p>
+        <p>7、美容护肤：土豆有很好的呵护肌肤、保养容颜的功效。</p>
+      </div>
+      <div *ngSwitchCase="1">
+        <h5>宜与土豆搭配的食材：</h5>
+        <p>土豆+豆角 （防止急性肠胃炎呕吐腹泻）；</p>
+        <p>土豆+ 豇豆（豇豆的营养成分能够让人头脑宁静,并且能够对消化系统进行调理,能消除胸膈胀满）；</p>
+        <p>土豆+牛肉（保护胃黏膜）；</p>
+        <p>土豆+肥牛（同食不仅味道好，并且马铃薯富含叶酸，有着保护胃黏膜的功效。）；</p>
+        <h5>适用人群</h5>
+        <p>一般人均可食用。尤适宜低蛋白饮食的肾病患者、糖尿病患者食用。</p>
+        <h5>禁忌人群</h5>
+        <p>无禁忌人群。</p>
+      </div>
+      <div *ngSwitchCase="2">
+        <ion-grid class='tudou'>
+            <ion-row>
+                <ion-col>
+                    <img src="../assets/imgs/d1.jpg"> 
+                    <p>土豆焖排骨</p>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/imgs/d2.jpg"> 
+                    <p>奶油土豆泥</p>
+                </ion-col>                                         
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <img src="../assets/imgs/d3.jpg"> 
+                    <p>土豆丝饼</p>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/imgs/d4.jpg"> 
+                    <p>剁椒蒸土豆</p>
+                </ion-col>                                         
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <img src="../assets/imgs/d5.jpg"> 
+                    <p>香辣土豆条</p>
+                </ion-col>
+                <ion-col>
+                    <img src="../assets/imgs/d6.jpg"> 
+                    <p>土豆牛腩</p>
+                </ion-col>                                         
+            </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+</ion-content>

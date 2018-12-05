@@ -30,6 +30,12 @@ import { CommentPage } from '../pages/comment/comment';
 import { GoodPage } from '../pages/good/good';
 import { VideoPage } from '../pages/video/video';
 import { ArticlePage } from '../pages/article/article';
+import { JichiPage } from '../pages/jichi/jichi';
+import { RandomPage } from '../pages/random/random';
+import { TudouPage } from '../pages/tudou/tudou';
+import { Tuijian1Page } from '../pages/tuijian1/tuijian1';
+import { Tuijian2Page } from '../pages/tuijian2/tuijian2';
+import { SerachPage } from '../pages/serach/serach';
 
 @NgModule({
   declarations: [
@@ -56,7 +62,13 @@ import { ArticlePage } from '../pages/article/article';
     AboutUsPage,
     LoginPage,
     RegisterPage,
-    FindPasswordPage
+    FindPasswordPage,
+    JichiPage,
+    RandomPage,
+    TudouPage,
+    Tuijian1Page,
+    Tuijian2Page,
+    SerachPage,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +101,12 @@ import { ArticlePage } from '../pages/article/article';
     GoodPage,
     VideoPage,
     ArticlePage,
+    JichiPage,
+    RandomPage,
+    TudouPage,
+    Tuijian1Page,
+    Tuijian2Page,
+    SerachPage,
   ],
   providers: [
     StatusBar,
