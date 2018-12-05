@@ -19,11 +19,25 @@ export class AuthorPage {
     this.isActive=i;
   }
   arr=["个人首页","个人作品"];
+  goChange(input:HTMLInputElement){
+    if( input.value=="已关注"){
+      var result = confirm('是否取消关注！');  
+      if(result){  
+          alert('取消关注成功成功！');  
+          input.value="+关注";
+      }   
+    }else{
+      input.value="已关注"
+    } 
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuthorPage');
   }
+
+    
 
 }

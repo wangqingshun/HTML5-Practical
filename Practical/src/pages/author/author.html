@@ -5,30 +5,31 @@
 </ion-header>
 
 <ion-content>
-  <div class="title" (click)="goAuthor()">
+  <div class="title">
     <div class="person"><img src="assets/imgs/timg.jpg" alt=""></div>
     <div class="name" >
       <h3>
         我爱厨房
-        <button ion-button color="tom">+关注</button>
+        <input type="button" value="+关注" (click)="goChange(input)" id="input" #input>
         <p class="time">time</p>
       </h3>
     </div>
   </div>
   <ul class="banner">
     <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
-  </ul>
+  </ul>  
   <div [ngSwitch]="isActive">
     <div *ngSwitchCase="0">
-      <ion-list>
         <ion-item>基本资料</ion-item>
+      <ion-list>
         <ion-item>基本信息</ion-item>
         <ion-item>住址</ion-item>
         <ion-item>职业</ion-item>
       </ion-list>
+      <ion-item>他的热门内容</ion-item>
     </div>
     <div *ngSwitchCase="1">
-    
+   
     </div>
   </div>
 </ion-content>

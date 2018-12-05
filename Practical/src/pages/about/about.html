@@ -1,7 +1,10 @@
 <ion-content>
- <ul class="title">
-    <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
-  </ul>
+  <div class="title">
+    <ul>
+      <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
+      <span (click)="goAdd()"> <img src="assets/imgs/add.png" alt=""></span>
+    </ul>
+  </div>
   <ion-searchbar placeholder="搜索"></ion-searchbar>
   <ion-refresher (ionRefresh)="doRefresh($event)">
       <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>

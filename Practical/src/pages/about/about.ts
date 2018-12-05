@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { VideoPage } from '../video/video';
 import { ArticlePage } from '../article/article';
+import { AddPage } from '../add/add';
 
 @Component({
   selector: 'page-about',
@@ -21,5 +22,8 @@ export class AboutPage {
   }
   goArticle(){
     this.navCtrl.push(ArticlePage);
+  }
+  goAdd(){
+    this.navCtrl.push(AddPage);
   }
 }

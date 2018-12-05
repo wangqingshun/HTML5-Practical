@@ -24,9 +24,13 @@ page-author {
             width: 250px;;
             margin-left: 10%;
         }
-        button{
+        input{
             float: right;
             margin-right: 5%;
+            background-color: tomato;
+        }
+        #input2{
+            display: none;
         }
     }
     .banner{

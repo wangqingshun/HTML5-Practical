@@ -4,20 +4,23 @@ page-about {
         margin: 0;
         height: 44px;
         line-height: 44px;
-       
         li{
             list-style: none;
             height: 44px;
             font-size: 20px;
             text-align: center;
             display: inline-block;
-            width: 33%;
+            width: 28%;
             clear: both;
         }
+        img{
+            float: right;
+        }
     }
-    .video{
+    .ideo{
         margin: 0;
         padding: 0;
+        clear: both;
         li{
             height: 200px;
             width: 48%;
