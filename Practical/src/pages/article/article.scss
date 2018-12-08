@@ -24,11 +24,13 @@ page-article {
             width: 250px;;
             margin-left: 10%;
         }
-        .name img{
-            height: 30px;
-            width: 30px;
-            float: right;
-        }
+    }
+    #like{
+        height: 30px;
+        width: 30px;
+        float: right;
+        position: relative;
+        bottom: 35px;
     }
     ion-item{
         line-height: 50px;

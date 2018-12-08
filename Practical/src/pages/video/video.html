@@ -1,10 +1,8 @@
 
 <ion-header>
-
   <ion-navbar>
     <ion-title>视频介绍</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -19,15 +17,15 @@
     </h3>
   </div>
 </div>
-<img src="assets/imgs/star.png" alt="" (click)="like(like)" id="like" #like>
+<img src="assets/imgs/star.png" alt="" (click)="changeImg(like)" id="like" #like>
 <h4>制作材料:</h4>
 <p>主料：糯米、 油条、肉松、 海苔</p>
 <p>辅料：白糖、 芝麻</p>
 <ion-list>
   <ion-item>
-      <img src="assets/imgs/zf.png" alt="">123
-      <img src="assets/imgs/pl1.png" alt="">234
-      <img src="assets/imgs/heart.png" alt="">456
+      <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
+      <img src="assets/imgs/pl1.png" alt=""><span class="num">123</span>
+      <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
   </ion-item>
 </ion-list>
 </ion-content>

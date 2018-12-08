@@ -17,7 +17,10 @@
             您的浏览器不支持 video 标签。
           </video>
         </li> -->
-        <li (click)="goVideo()"><img src="assets/imgs/a9.jpg" alt=""></li>
+        <li *ngFor="let item of vido" (click)="goVideo()">
+          <img src="{{item.src}}" alt="">
+          <div class="bf"><img src="assets/imgs/bf.png" alt=""></div>
+        </li>
       </ul>
     </div>
     <div *ngSwitchCase="1">

@@ -15,17 +15,36 @@ import { AuthorPage } from '../author/author';
   templateUrl: 'video.html',
 })
 export class VideoPage {
-
+  count=0;
+  count1=123;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  like(like:HTMLInputElement){
-    // var img=document.getElementsByClassName("img")[0].children[0];
-    like.src="../assets/imgs/like.png";
+  changeImg(like:HTMLInputElement){
+    this.count++;
+    if(this.count%2==0){
+      like.src="../assets/imgs/star.png";
+    }else{
+      like.src="../assets/imgs/xing.png";
+    }
+  }
+  changeGood(good:HTMLInputElement,num:HTMLInputElement){
+    this.count++;
+    if(this.count%2==0){
+      good.src="../assets/imgs/like.png";
+      this.count1++;
+      // document.getElementsByClassName("num").innerHTML=this.count1;
+    }else{
+      good.src="../assets/imgs/heart.png";
+      this.count1--;
+    }
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoPage');
+    // console.log('ionViewDidLoad VideoPage');
   }
   goAuthor(){
     this.navCtrl.push(AuthorPage);
+  }
+  share(){
+    alert("转发该消息");
   }
 }

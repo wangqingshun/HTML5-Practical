@@ -7,14 +7,13 @@
 <ion-content>
   <div class="title" (click)="goAuthor()">
     <div class="person"><img src="assets/imgs/timg.jpg" alt=""></div>
-    <div class="name" >
+    <div class="name">
       <h3>
         我爱厨房
-        <span><img src="assets/imgs/star.png" alt=""></span>
-        <p class="time">time</p>
       </h3>
     </div>
   </div>
+  <img src="assets/imgs/star.png" alt="" (click)="changeImg(like)" id="like" #like>
   <div><img src="assets/imgs/r1.jpg" alt=""></div>
   <h3>名字</h3>
   <h4>制作材料:</h4>
@@ -34,9 +33,9 @@
   <p>汤类 家常菜 汤羹类</p>
   <ion-list>
     <ion-item>
-      <img src="assets/imgs/zf.png" alt="">123
-      <img src="assets/imgs/pl1.png" alt="">234
-      <img src="assets/imgs/heart.png" alt="">456
+        <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
+        <img src="assets/imgs/pl1.png" alt=""><span class="num">123</span>
+        <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
     </ion-item>
   </ion-list>
 </ion-content>
