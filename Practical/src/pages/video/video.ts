@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthorPage } from '../author/author';
-
+import { Http} from '@angular/http';
 /**
  * Generated class for the VideoPage page.
  *
@@ -15,9 +15,21 @@ import { AuthorPage } from '../author/author';
   templateUrl: 'video.html',
 })
 export class VideoPage {
+  id;
+  video;
+  videosrc;
+  touxiang;
+  name;
   count=0;
   count1=123;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
+    this.id=navParams.get('id');
+    this.http.get('/api/share/video/'+this.id).subscribe((data)=>{
+      this.video=JSON.parse(data["_body"]);
+      this.videosrc=this.video.videosrc;
+      this.touxiang=this.video.touxiang;
+      this.name=this.video.name;
+    })
   }
   changeImg(like:HTMLInputElement){
     this.count++;

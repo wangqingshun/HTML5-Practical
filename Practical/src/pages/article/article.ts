@@ -39,7 +39,7 @@ export class ArticlePage {
     if(this.count%2==0){
       good.src="../assets/imgs/like.png";
       this.count1++;
-      document.getElementsByClassName("num").innerHTML=this.count1;
+      document.getElementsByClassName("num")[0].innerHTML=this.count1.toString();
     }else{
       good.src="../assets/imgs/heart.png";
       this.count1--;

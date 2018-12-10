@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Http,HttpModule} from '@angular/http'
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -11,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AddPage } from '../pages/add/add';
 import { PersonPage } from '../pages/person/person';
 import { MyDataPage } from '../pages/my-data/my-data';
 import { WorksPage } from '../pages/works/works';
@@ -40,6 +42,7 @@ import { SerachPage } from '../pages/serach/serach';
 @NgModule({
   declarations: [
     MyApp,
+    AddPage,
     AboutPage,
     ContactPage,
     HomePage,
@@ -72,12 +75,14 @@ import { SerachPage } from '../pages/serach/serach';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
+    AddPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -111,7 +116,9 @@ import { SerachPage } from '../pages/serach/serach';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //Http
   ]
+  
 })
 export class AppModule {}

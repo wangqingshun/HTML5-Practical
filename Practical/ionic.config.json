@@ -1,6 +1,13 @@
+
 {
   "name": "Practical",
   "app_id": "",
+  "proxies":[
+    {
+      "path":"/api",
+      "proxyUrl":"http://39.96.21.142:3000/api"
+    }
+  ],
   "type": "ionic-angular",
   "integrations": {}
 }

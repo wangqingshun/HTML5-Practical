@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { App,IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { Http } from '@angular/http'
 
 /**
  * Generated class for the RegisterPage page.
@@ -15,14 +16,19 @@ import { LoginPage } from '../login/login';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
-  constructor(public app:App,public navCtrl: NavController, public navParams: NavParams) {
+  phone;
+  psw;
+  rpsw;
+  constructor(public app:App,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad RegisterPage');
   }
   goLogin(){
-    this.app.getRootNavs()[0].setRoot(LoginPage);
+    // this.app.getRootNavs()[0].setRoot(LoginPage);
+    //this.http.post('/reg',{phone:})
+    this.phone=document.getElementById('phone').nodeValue;
+    console.log(this.phone);
   }
 }

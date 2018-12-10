@@ -6,10 +6,11 @@
 </ion-header>
 <ion-content padding>
     <div class="box">
+        <form method="GET" action="/reg" >
         <ion-list>
             <ion-item>
                 <ion-icon name="md-phone-portrait" item-start></ion-icon>
-                <ion-input type="number" placeholder="手机号"></ion-input>
+                <ion-input type="text" placeholder="手机号" name="phone" id="phone" required></ion-input>
             </ion-item>
             <ion-item>
                 <ion-icon name="md-key" item-start></ion-icon>
@@ -18,15 +19,16 @@
             </ion-item>
             <ion-item>
                 <ion-icon name="md-lock" item-start></ion-icon>
-                <ion-input type="password" placeholder="请输入密码"></ion-input>
+                <ion-input type="password" placeholder="请输入密码" name="psw" id="psw" required></ion-input>
             </ion-item>
             <ion-item>
                 <ion-icon name="md-lock" item-start></ion-icon>
-                <ion-input type="password" placeholder="请再次输入密码"></ion-input>
+                <ion-input type="password" placeholder="请再次输入密码" id="rpsw"></ion-input>
             </ion-item>
         </ion-list>
         <button ion-button block color="tom" (click)='goLogin()'>注册</button>
         <ion-radio value='agree' color='tom'></ion-radio>我已阅读并同意注册《食途APP注册协议》
+        </form>
     </div>
 
 </ion-content>

@@ -7,13 +7,13 @@
 
 
 <ion-content>
-<!-- <div><video src="{{}}">您的浏览器不支持video标签</video></div> -->
-<div class="video"></div>
+<div><video src={{videosrc}} controls="controls">您的浏览器不支持video标签</video></div>
+<!-- <div class="video"></div> -->
 <div class="title" (click)="goAuthor()">
-  <div class="person"><img src="assets/imgs/timg.jpg" alt=""></div>
+  <div class="person"><img src={{touxiang}} alt=""></div>
   <div class="name">
     <h3>
-      我爱厨房
+      {{name}}
     </h3>
   </div>
 </div>

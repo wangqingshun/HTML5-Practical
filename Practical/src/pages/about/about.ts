@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { VideoPage } from '../video/video';
 import { ArticlePage } from '../article/article';
 import { AddPage } from '../add/add';
-// import { Http } from '@angular/http/src/http';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -18,16 +18,17 @@ export class AboutPage {
     this.isActive=i;
   }
   arr=["视频","文章","关注"];
-  constructor(public navCtrl: NavController) {
-    // this.http.get('/api//1').subscribe((data)=>{
-    //     this.vido=data;
-    //   })
+  constructor(public navCtrl: NavController,public http:Http) {
+    this.http.get('/api/share').subscribe((data)=>{
+        //console.log(data);
+        this.vido=JSON.parse(data["_body"]);
+      })
   }
   ionViewDidLoad() {
     
   }
-  goVideo(){
-    this.navCtrl.push(VideoPage);
+  goVideo(x){
+    this.navCtrl.push(VideoPage,{id:x});
   }
   goArticle(){
     this.navCtrl.push(ArticlePage);

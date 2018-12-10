@@ -1,6 +1,9 @@
 <ion-content>
-    <ion-slides pager='true' autoplay='1000' loop='true' class='sli'>
-        <ion-slide>
+    <ion-slides pager='true' autoplay='1000' loop='true' class='sli' *ngIf="len>1">
+        <ion-slide *ngFor="let item of lunbo" >
+            <img src={{item.src}} alt={{item.p}}>
+        </ion-slide>
+        <!-- <ion-slide>
             <img src="../assets/imgs/ms.jpg">
         </ion-slide>
         <ion-slide>
@@ -8,16 +11,19 @@
         </ion-slide>
         <ion-slide>
             <img src="../assets/imgs/ms2.jpg">
-        </ion-slide>
+        </ion-slide> -->
     </ion-slides>
-
     <ion-grid class='tjlist'>
         <p class='tj'>
             <span>为你推荐</span>
             <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" (click)="tj()"></ion-icon>
         </p>
-        <ion-row>
-            <ion-col>
+        <ion-row reorder="true">
+            <ion-col col-4 *ngFor="let item of tuijian1" (click)='jc()'>
+                <img src={{item.src}} alt={{item.p}}>
+                <p>{{item.p}}</p>
+            </ion-col >
+            <!-- <ion-col>
                 <img src="../assets/imgs/tj1.jpg">
                 <p>皮蛋瘦肉粥</p>
             </ion-col>
@@ -42,9 +48,9 @@
             <ion-col>
                 <img src="../assets/imgs/tj6.png">
                 <p>香辣汉堡</p>
-            </ion-col>
+            </ion-col> -->
         </ion-row>
-        <p class='change'>
+        <p class='change' (click)="huan(1)">
             <span>换一批</span>
             <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
         </p>
@@ -55,8 +61,12 @@
             <span>优秀食材</span>
             <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" (click)='sc()'></ion-icon>
         </p>
-        <ion-row>
-            <ion-col (click)='td()'>
+        <ion-row reorder="true">
+            <ion-col col-4 (click)='td()' *ngFor="let item of tuijian2">
+                <img src={{item.src}} alt={{item.p}}>
+                <p>{{item.p}}</p>
+            </ion-col>
+            <!-- <ion-col (click)='td()'>
                 <img src="../assets/imgs/sc1.jpg">
                 <p>土豆</p>
             </ion-col>
@@ -81,9 +91,9 @@
             <ion-col>
                 <img src="../assets/imgs/sc6.jpg">
                 <p>菠菜</p>
-            </ion-col>
+            </ion-col> -->
         </ion-row>
-        <p class='change'>
+        <p class='change' (click)="huan(2)">
             <span>换一批</span>
             <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
         </p>
