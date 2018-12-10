@@ -25,10 +25,10 @@ export class RegisterPage {
   ionViewDidLoad() {
     //console.log('ionViewDidLoad RegisterPage');
   }
-  goLogin(){
+  goLogin(phone:HTMLInputElement,password:HTMLInputElement){
     // this.app.getRootNavs()[0].setRoot(LoginPage);
     //this.http.post('/reg',{phone:})
-    this.phone=document.getElementById('phone').nodeValue;
-    console.log(this.phone);
+    console.log(phone.value);
+    console.log(password.value);
   }
 }

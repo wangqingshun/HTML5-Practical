@@ -1,0 +1,9 @@
+
+{
+  "host": "localhost",
+  "user": "root",
+  "password": "shun1015",
+  "database": "cut",
+  "connectionLimit": 10,
+  "supportBigNumbers": true
+}
