@@ -75,7 +75,7 @@ import { SerachPage } from '../pages/serach/serach';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsHideOnSubPages:'true'}),
     HttpModule
   ],
   bootstrap: [IonicApp],
