@@ -32,14 +32,15 @@ page-article {
         position: relative;
         bottom: 35px;
     }
-    .com{
-        height: 450px;
-        width: 100%;
-        display: none;
-        position: absolute;
-        top: 470px;
-        background:	#f8f8f8;
-        overflow-y:auto;
+    ion-footer{
+        .com{
+            height: 450px;
+            width: 100%;
+            display: none;
+            position: relative;
+            background:	#f8f8f8;
+            overflow-y:auto;
+        }
     }
     .per{
         div{
@@ -67,12 +68,10 @@ page-article {
         height: 130px;
     }
     ion-item{
-        line-height: 50px;
         img{
             height: 25px;
             width: 25px;
             margin-left: 12%;
-            margin-top: 10%;
         }
     }
 }

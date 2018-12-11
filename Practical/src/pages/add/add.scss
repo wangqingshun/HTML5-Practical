@@ -1,9 +1,18 @@
 page-add {
+    textarea{
+        height: 30%;
+        width: 100%;
+        border: none;
+    }
+    .img{
+        height: 20%;
+        width: 40%;
+    }
     li{
         width:8%;
         list-style: none;
         float:left;
         margin-left: 10%;
-        margin-top: 30%;     
+        margin-top: 10%;     
     }
 }

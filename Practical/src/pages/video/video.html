@@ -21,11 +21,39 @@
 <h4>制作材料:</h4>
 <p>主料：糯米、 油条、肉松、 海苔</p>
 <p>辅料：白糖、 芝麻</p>
-<ion-list>
-  <ion-item>
-      <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
-      <img src="assets/imgs/pl1.png" alt=""><span class="num">123</span>
-      <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
-  </ion-item>
-</ion-list>
 </ion-content>
+<ion-footer>
+   <div class="com">
+    <ul>
+      <li>
+        <div class="per">
+          <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
+          <div class="name">
+            <h5>
+              我爱厨房
+            </h5>
+          </div>
+        </div>
+        <div class="pcom">南国的雪向来是不多见的，当每个金色的秋天走到尽头，我总会伸出指头一年一年的数着，只待它的轮回</div>
+      </li>
+      <li>
+          <div class="per">
+            <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
+            <div class="name">
+              <h5>
+                我爱厨房
+              </h5>
+            </div>
+          </div>
+          <div class="pcom">雪如鹅毛般飘落，我站在雪地里，呆呆的抬起头，看雪在我头顶上飞舞，旋转，停留，消逝，这是雪！这是雪！我兴奋的在心里叫喊，15年后，再一次伸出手，雪在我的手上再次停下，融化，蒸发，回归</div>
+        </li>
+    </ul>
+  </div>
+  <ion-list>
+    <ion-item>
+        <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
+        <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">123</span>
+        <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
+    </ion-item>
+  </ion-list>
+</ion-footer>
