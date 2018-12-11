@@ -6,9 +6,10 @@
 </ion-header>
 
 <ion-content>
-    <ion-input placeholder="说点什么······"></ion-input>
+    <textarea type="text"  placeholder="说点什么······"></textarea>
+    <div class="img"><img src="{{imgUrl}}" alt=""></div>
     <ul>
-      <li><img src="assets/imgs/camera.png" alt=""></li> 
+      <li (click)="takePhoto()"><img src="assets/imgs/camera.png" alt=""></li> 
       <li><img src="assets/imgs/photo.png" alt=""></li> 
     </ul>
 </ion-content>
