@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VideoPage } from '../video/video';
+import { ArticlePage } from '../article/article';
 
 /**
  * Generated class for the GoodPage page.
@@ -21,5 +23,10 @@ export class GoodPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GoodPage');
   }
-
+  goVideo(x){
+    this.navCtrl.push(VideoPage,{id:x});
+  }
+  goArticle(){
+    this.navCtrl.push(ArticlePage);
+  }
 }

@@ -2,7 +2,7 @@
   <ul class="title">
     <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
   </ul>
-  <ion-searchbar placeholder="搜索"></ion-searchbar>
+  <ion-searchbar placeholder="搜索" (click)="goSearch()"></ion-searchbar>
   <div [ngSwitch]="isActive">
     <div *ngSwitchCase="0">
       <ion-list>

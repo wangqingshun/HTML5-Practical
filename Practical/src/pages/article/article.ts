@@ -59,6 +59,15 @@ export class ArticlePage {
       this.count1--;
     }
   }
+  perComment(){
+    this.count++;
+    var com=document.getElementsByClassName("com")[0] as HTMLElement;
+    if(this.count%2==0){
+      com.style.display='none';
+    }else{
+      com.style.display='block';
+    }
+  }
   share(){
     alert("转发该消息");
   }

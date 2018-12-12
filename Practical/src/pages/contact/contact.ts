@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { MyPage } from '../my/my';
 import { CommentPage } from '../comment/comment';
 import { GoodPage } from '../good/good';
+import { SerachPage } from '../serach/serach';
 
 @Component({
   selector: 'page-contact',
@@ -25,5 +26,8 @@ arr=["消息","通知"];
   }
   goGood(){
     this.navCtrl.push(GoodPage);
+  }
+  goSearch(){
+    this.navCtrl.push(SerachPage);
   }
 }

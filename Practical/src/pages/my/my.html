@@ -5,5 +5,46 @@
 </ion-header>
 
 <ion-content>
-
+ <div class="onper">
+  <ul>
+    <li class="p"><img src="assets/imgs/timg.jpg" alt=""></li>
+    <li>
+      <h5>
+        我爱厨房
+      </h5>
+    </li>
+  </ul>
+  <div class="share">做的不错，学起来很快</div>
+  <ul class="article">
+    <li (click)="goArticle()">
+      <div class="artimg"><img src="assets/imgs/a9.jpg" alt=""></div>
+      <div class="artcon">
+        <h3>菜名</h3>
+        <p>内容简介</p>
+      </div>
+    </li>
+  </ul>
+  <div class="com">
+    <ul>
+      <li>
+        <div class="per">
+          <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
+          <div class="name">
+            <h5>
+              我爱厨房
+            </h5>
+          </div>
+        </div>
+        <div class="pcom">南国的雪向来是不多见的，当每个金色的秋天走到尽头，我总会伸出指头一年一年的数着，只待它的轮回</div>
+      </li>
+    </ul>
+  </div>
+  <ion-list>
+    <ion-item>
+        <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
+        <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">123</span>
+        <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
+    </ion-item>
+  </ion-list>
+ </div>
 </ion-content>

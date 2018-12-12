@@ -4,6 +4,7 @@ import { VideoPage } from '../video/video';
 import { ArticlePage } from '../article/article';
 import { AddPage } from '../add/add';
 import { Http } from '@angular/http';
+import { SerachPage } from '../serach/serach';
 
 
 @Component({
@@ -37,5 +38,8 @@ export class AboutPage {
   }
   goAdd(){
     this.navCtrl.push(AddPage);
+  }
+  goSearch(){
+    this.navCtrl.push(SerachPage);
   }
 }

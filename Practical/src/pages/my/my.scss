@@ -1,3 +1,75 @@
 page-my {
-
+    .onper{
+        border: 1px solid gainsboro;
+    } 
+    .p img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-left: 2%;
+    }
+    li{
+        float: left;
+        list-style: none;
+    }
+   h5{
+        margin-left: 2%;
+        width: 200px;
+    } 
+    .share{
+        margin: 15% 0 3% 2%;
+        font-size: 18px;;
+    }
+    .article{
+        margin: 0;
+        padding: 0;
+        li{
+            height: 110px;
+            width: 98%;
+            margin-left: 1%;
+            border: 1px solid gainsboro;
+        }
+        div{
+            float: left;
+        }
+        .artimg{
+            width: 40%;
+            height: 110px;
+            img{
+                height: 100%;
+            }
+        }
+        .artcon{
+            width: 60%;
+            height: 110px;
+            p{
+                margin-left: 5px;
+            }
+        }
+    }
+    .com{
+        height: 450px;
+        width: 100%;
+        display: none;
+        position: relative;
+        background:	#f8f8f8;
+        overflow-y:auto;
+    }
+    .pcom{
+        height: 30%;
+        width: 100%;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    .com li{
+        list-style: none;
+        height: 130px;
+    }
+    ion-item{
+        img{
+            height: 25px;
+            width: 25px;
+            margin-left: 12%;
+        }
+    }
 }
