@@ -24,9 +24,9 @@ import { AboutUsPage } from '../about-us/about-us';
   templateUrl: 'person.html',
 })
 export class PersonPage {
-  public username:string;
+  public Newname:string;
   ionViewWillEnter(){
-    this.username= window.localStorage.getItem('username');
+    this.Newname= window.localStorage.getItem('username');
   }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

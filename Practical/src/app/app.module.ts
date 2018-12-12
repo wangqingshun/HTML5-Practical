@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HttpModule} from '@angular/http';
+import {Http,HttpModule} from '@angular/http';
 import { Camera } from '@ionic-native/camera';
 
 import { AboutPage } from '../pages/about/about';
@@ -13,7 +13,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AddPage } from '../pages/add/add';
 import { PersonPage } from '../pages/person/person';
 import { MyDataPage } from '../pages/my-data/my-data';
 import { WorksPage } from '../pages/works/works';
@@ -39,12 +38,19 @@ import { TudouPage } from '../pages/tudou/tudou';
 import { Tuijian1Page } from '../pages/tuijian1/tuijian1';
 import { Tuijian2Page } from '../pages/tuijian2/tuijian2';
 import { SerachPage } from '../pages/serach/serach';
+import { CdetailPage } from '../pages/cdetail/cdetail';
+import { ServiceModule } from '../services/service.module';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { AddPage } from '../pages/add/add';
+import { ImgService } from '../services/ImgService.service';
+import { NoticeService } from '../services/NoticeService.service';
+import { File } from '@ionic-native/file';
+import { ImagePicker } from '@ionic-native/image-picker';
 import { AuthorPage } from '../pages/author/author';
 
 @NgModule({
   declarations: [
     MyApp,
-    AddPage,
     AboutPage,
     ContactPage,
     HomePage,
@@ -74,18 +80,22 @@ import { AuthorPage } from '../pages/author/author';
     Tuijian1Page,
     Tuijian2Page,
     SerachPage,
+    CdetailPage,
+    AddPage,
     AuthorPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp,{tabsHideOnSubPages:'true'}),
-    HttpModule
+    ServiceModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: 'true'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
-    AddPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -115,15 +125,19 @@ import { AuthorPage } from '../pages/author/author';
     Tuijian1Page,
     Tuijian2Page,
     SerachPage,
-    AuthorPage
+    CdetailPage,
+    AddPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    File,
+    ImgService,
+    ImagePicker,
+    NoticeService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    //Http
+    FileTransfer
   ]
-  
 })
 export class AppModule {}
