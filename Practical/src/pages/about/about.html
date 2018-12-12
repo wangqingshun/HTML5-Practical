@@ -32,11 +32,13 @@
             <p>{{article.content}}</p>
           </div>
         </li> -->
-        <li (click)="goArticle()">
-          <div class="artimg"><img src="assets/imgs/a9.jpg" alt=""></div>
+        <li *ngFor="let item of article" (click)="goArticle(item.id)">
+          <div class="artimg"><img src={{item.src}} alt=""></div>
           <div class="artcon">
-            <h3>菜名</h3>
-            <p>内容简介</p>
+            <h5>{{item.name}}</h5>
+            <p>{{item.p}}</p>
+            <p>使用的厨具:{{item.tool}}</p>
+            <p>所属分类：{{item.type}}</p>
           </div>
         </li>
       </ul>

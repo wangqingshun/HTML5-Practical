@@ -2,8 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Http,HttpModule} from '@angular/http';
-import { Camera } from '@ionic-native/camera';
+import { Http,HttpModule} from '@angular/http'
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -39,7 +38,6 @@ import { TudouPage } from '../pages/tudou/tudou';
 import { Tuijian1Page } from '../pages/tuijian1/tuijian1';
 import { Tuijian2Page } from '../pages/tuijian2/tuijian2';
 import { SerachPage } from '../pages/serach/serach';
-import { AuthorPage } from '../pages/author/author';
 
 @NgModule({
   declarations: [
@@ -74,7 +72,6 @@ import { AuthorPage } from '../pages/author/author';
     Tuijian1Page,
     Tuijian2Page,
     SerachPage,
-    AuthorPage
   ],
   imports: [
     BrowserModule,
@@ -115,12 +112,10 @@ import { AuthorPage } from '../pages/author/author';
     Tuijian1Page,
     Tuijian2Page,
     SerachPage,
-    AuthorPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     //Http
   ]

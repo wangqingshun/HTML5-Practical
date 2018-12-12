@@ -5,23 +5,26 @@
 </ion-header>
 
 <ion-content>
-    <img src="../assets/imgs/sp.jpg" class='sp1'>
-    <h4>可乐鸡翅</h4>
+    <img src={{imgsrc}} class='sp1'>
+    <h4>{{name}}</h4>
     <h4>制作材料：</h4>
     <div>
-        <p>主料：鸡翅中</p>
-        <p>辅料：可乐</p>
-        <p>配料：八角、姜、葱段、料酒</p>
+        <p>主料：{{zhuliao}}</p>
+        <p>辅料：{{fuliao}}</p>
+        <p>配料：{{peiliao}}</p>
     </div>
     <h4>制作步骤：</h4>
     <div>
-        <p>1.鸡翅洗净，入葱姜水中煮沸捞出，沥干水份。</p>
+        <p *ngFor="let item of buzhou">
+            {{item}}
+        </p>
+        <!-- <p>1.鸡翅洗净，入葱姜水中煮沸捞出，沥干水份。</p>
         <p>2.锅内放少许油少热，放入鸡翅。煎至外皮两面泛黄。</p>
         <p>3.倒入可乐没过鸡翅即可。</p>
         <p>4.加入酱油、大料、葱段、姜片，大火烧开后转小火。</p>
-        <p>5.炖至汤汁浓稠即可。</p>
+        <p>5.炖至汤汁浓稠即可。</p> -->
     </div>
-    <h3>鸡翅的其他做法:</h3>
+    <!-- <h3>鸡翅的其他做法:</h3>
     <ion-grid class='tjlist'>
       <ion-row>
           <ion-col>
@@ -42,5 +45,5 @@
               <p class='last'>...</p>
           </ion-col>
       </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>

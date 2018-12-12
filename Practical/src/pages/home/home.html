@@ -19,7 +19,7 @@
             <ion-icon ios="ios-arrow-dropright" md="md-arrow-dropright" (click)="tj()"></ion-icon>
         </p>
         <ion-row reorder="true">
-            <ion-col col-4 *ngFor="let item of tuijian1" (click)='jc()'>
+            <ion-col col-4 *ngFor="let item of tuijian1" (click)='jc(item.id)'>
                 <img src={{item.src}} alt={{item.p}}>
                 <p>{{item.p}}</p>
             </ion-col >

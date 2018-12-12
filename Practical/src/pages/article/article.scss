@@ -32,46 +32,13 @@ page-article {
         position: relative;
         bottom: 35px;
     }
-    ion-footer{
-        .com{
-            height: 450px;
-            width: 100%;
-            display: none;
-            position: relative;
-            background:	#f8f8f8;
-            overflow-y:auto;
-        }
-    }
-    .per{
-        div{
-            float: left;
-        }
-        .p img{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            margin-left: 2%;
-        }
-    }
-   h5{
-        margin-left: 2%;
-        width: 200px;
-    } 
-    .pcom{
-        height: 30%;
-        width: 100%;
-        overflow: hidden; 
-        text-overflow: ellipsis;
-    }
-    .com li{
-        list-style: none;
-        height: 130px;
-    }
     ion-item{
+        line-height: 50px;
         img{
             height: 25px;
             width: 25px;
             margin-left: 12%;
+            margin-top: 10%;
         }
     }
 }

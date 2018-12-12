@@ -21,7 +21,9 @@ export class AboutPage {
   constructor(public navCtrl: NavController,public http:Http) {
     this.http.get('/api/share').subscribe((data)=>{
         //console.log(data);
-        this.vido=JSON.parse(data["_body"]);
+       var obj=JSON.parse(data["_body"]);
+       this.vido=obj[0];
+       this.article=obj[1];
       })
   }
   ionViewDidLoad() {
@@ -30,8 +32,8 @@ export class AboutPage {
   goVideo(x){
     this.navCtrl.push(VideoPage,{id:x});
   }
-  goArticle(){
-    this.navCtrl.push(ArticlePage);
+  goArticle(x){
+    this.navCtrl.push(ArticlePage,{id:x});
   }
   goAdd(){
     this.navCtrl.push(AddPage);

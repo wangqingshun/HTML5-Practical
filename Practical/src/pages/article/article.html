@@ -14,56 +14,20 @@
     </div>
   </div>
   <img src="assets/imgs/star.png" alt="" (click)="changeImg(like)" id="like" #like>
-  <div><img src="assets/imgs/r1.jpg" alt=""></div>
-  <h3>名字</h3>
+  <div><img src={{imgsrc}} alt=""></div>
+  <h3>{{name}}</h3>
   <h4>制作材料:</h4>
-  <p>主料：糯米、 油条、肉松、 海苔</p>
-  <p>辅料：白糖、 芝麻</p>
+  <p>主料：{{zhuliao}}</p>
+  <p>辅料：{{fuliao}}</p>
   <h4>制作步骤:</h4>
   <ul padding>
-    <li>干贝泡发1个小时，切碎碾压碎</li>
-    <li>面粉中一点点加水，搅匀再加水，直到没干粉，搅拌成小颗粒面疙瘩。tips：面疙瘩是黑色的，因为面粉是黑麦全麦粉，9个月的宝宝可以吃这种疙瘩，这时候可以加杂粮粉了，刚开始添加杂粮粉从1/5开始加起，慢慢增加粗粮比例，到2周岁可以达到精面一半粗粮粉一半；</li>
-    <li>西兰花入沸水焯1分钟，花穗切碎；</li>
-    <li>煮2分钟，西兰花穗一起煮30秒出锅；</li>
-    <li>锅中烧一碗水，干贝丝一起煮开，面疙瘩加入；</li>
+    <li *ngFor = "let item of buzhou">{{item}}</li>
   </ul>
-  <h4>使用厨具：</h4>
-  <p>煮锅</p>
-  <h4>所属分类：</h4>
-  <p>汤类 家常菜 汤羹类</p>
-</ion-content>
-<ion-footer>
-   <div class="com">
-    <ul>
-      <li>
-        <div class="per">
-          <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
-          <div class="name">
-            <h5>
-              我爱厨房
-            </h5>
-          </div>
-        </div>
-        <div class="pcom">南国的雪向来是不多见的，当每个金色的秋天走到尽头，我总会伸出指头一年一年的数着，只待它的轮回</div>
-      </li>
-      <li>
-          <div class="per">
-            <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
-            <div class="name">
-              <h5>
-                我爱厨房
-              </h5>
-            </div>
-          </div>
-          <div class="pcom">雪如鹅毛般飘落，我站在雪地里，呆呆的抬起头，看雪在我头顶上飞舞，旋转，停留，消逝，这是雪！这是雪！我兴奋的在心里叫喊，15年后，再一次伸出手，雪在我的手上再次停下，融化，蒸发，回归</div>
-        </li>
-    </ul>
-  </div>
-  <ion-list>
+  <!-- <ion-list>
     <ion-item>
         <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
-        <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">123</span>
+        <img src="assets/imgs/pl1.png" alt=""><span class="num">123</span>
         <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
     </ion-item>
-  </ion-list>
-</ion-footer>
+  </ion-list> -->
+</ion-content>

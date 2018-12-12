@@ -35,8 +35,8 @@ export class HomePage {
   tj(){
     this.navCtrl.push(Tuijian1Page);
   }
-  jc(){
-    this.navCtrl.push(JichiPage);
+  jc(x){
+    this.navCtrl.push(JichiPage,{id:x});
   }
   sc(){
     this.navCtrl.push(Tuijian2Page);
