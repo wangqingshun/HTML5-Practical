@@ -126,7 +126,8 @@ import { AuthorPage } from '../pages/author/author';
     Tuijian2Page,
     SerachPage,
     CdetailPage,
-    AddPage
+    AddPage,
+    AuthorPage
   ],
   providers: [
     StatusBar,

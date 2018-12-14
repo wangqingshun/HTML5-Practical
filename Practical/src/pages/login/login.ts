@@ -30,7 +30,6 @@ export class LoginPage {
   }
   logIn(username: HTMLInputElement, password : HTMLInputElement){
     if (username.value == "" || password.value == "") {
-      //this.presentToast("middle", "error", "账户或密码不能为空");
       alert("账户或密码不能为空");
     } 
     else{
@@ -66,12 +65,6 @@ export class LoginPage {
  
     }
     */
-  }
-  presentToast(arg0: string, arg1: string, arg2: string): any {
-    throw new Error("Method not implemented.");
-  }
-  ionViewDidLoad() {
-    //console.log('ionViewDidLoad LoginPage');
   }
 
 }

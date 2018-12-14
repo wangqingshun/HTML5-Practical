@@ -102,8 +102,7 @@ export class ImgService {
    
        //this.fileTransfer = new FileTransfer();
         const fileTransfer: FileTransferObject = this.transfer.create();
-        let options: any;
-        options = {
+        let options: FileUploadOptions = {
             fileKey: this.upload.fileKey,
             headers: this.upload.headers,
             params: this.upload.params
