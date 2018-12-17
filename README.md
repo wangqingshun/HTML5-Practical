@@ -1,5 +1,7 @@
 # 食途
 ##2016级HTML5项目实训
+ ##二级标题  
+###三级标题
 * [GitHub](https://github.com/wangqingshun/HTML5-Practical "悬停显示")<br> 
 * [Redmine](http://10.7.1.5/projects/2016_h5_eating-strategy/ "悬停显示")<br>
 ###项目简介 
@@ -16,15 +18,13 @@
   * Email：1315211512@qq.com<br>
   * Gitthub：https://github.com/zhuhongyu6<br>
 * 王清顺（前端工程师、测试）<br>
- * Email：2184801857@qq.com<br>
- * Github：https://github.com/wangqingshun<br>
+  * Email：2184801857@qq.com<br>
+  * Github：https://github.com/wangqingshun<br>
 * 陈自力（前端工程师、UI设计）<br>
- * Email：646582284@qq.com<br>
- * Github：https://github.com/chenzilli<br>
+  * Email：646582284@qq.com<br>
+  * Github：https://github.com/chenzilli<br>
 * 郭佳昊（前端工程师、测试）<br>
- * Email：1113234417@qq.com<br>
- * Github：https://github.com/Guojiahao7<br>
-  * 编程语言  
-    * 脚本语言  
+  * Email：1113234417@qq.com<br>
+  * Github：https://github.com/Guojiahao7<br>
 ###运行效果
 
