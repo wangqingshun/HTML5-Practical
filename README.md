@@ -7,14 +7,14 @@
 随着生活水平的提高，越来越多的人开始追求舌尖上的享受，纠结每日三餐，食途应用程序为你推荐美食及制作过程，提供美食分享的平台，在你纠结食物时，可以让系统自助为你选择。食途的上线，人们可以找到和做出更多的美食，满足自己的味蕾享受，这个应用程序不仅仅可以带来商业的价值，更是对美食的推广。<br>
 ###项目成员
 * 张成成（项目经理、前端工程师、数据库管理员）<br>
- * Email：1306073684@qq.com<br>  
- * Github：https://github.com/zhangchengcheng123<br>  
+  * Email：1306073684@qq.com<br>  
+  * Github：https://github.com/zhangchengcheng123<br>  
 * 闫博文（数据库管理员、前端工程师）<br>  
- * Email：942090534@qq.com<br>
- * Github：https://github.com/Yanbowen1999<br>
+  * Email：942090534@qq.com<br>
+  * Github：https://github.com/Yanbowen1999<br>
 * 朱泓宇（后端工程师）<br>
- * Email：1315211512@qq.com<br>
- * Gitthub：https://github.com/zhuhongyu6<br>
+  * Email：1315211512@qq.com<br>
+  * Gitthub：https://github.com/zhuhongyu6<br>
 * 王清顺（前端工程师、测试）<br>
  * Email：2184801857@qq.com<br>
  * Github：https://github.com/wangqingshun<br>
@@ -24,5 +24,7 @@
 * 郭佳昊（前端工程师、测试）<br>
  * Email：1113234417@qq.com<br>
  * Github：https://github.com/Guojiahao7<br>
+  * 编程语言  
+    * 脚本语言  
 ###运行效果
 
