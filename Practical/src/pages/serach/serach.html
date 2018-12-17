@@ -1,7 +1,12 @@
 <ion-header>
   <ion-navbar no-border>
-      <!-- <ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)='goback()'></ion-icon> -->
-      <ion-searchbar placeholder="重庆鸡公煲"></ion-searchbar>
+      <input type="search" placeholder="重庆鸡公煲" name="food" autocomplete="on" list="names" results /> 
+      <datalist id="names"> 
+        <option>大龙虾</option> 
+        <option>麻辣香锅</option> 
+        <option>烤鱼</option> 
+        <option>烧烤</option> 
+      </datalist> 
       <span>搜索</span>
   </ion-navbar>
 </ion-header>

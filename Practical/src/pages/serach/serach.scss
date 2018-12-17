@@ -1,11 +1,10 @@
 page-serach {
-    ion-searchbar{
+    input{
         width:230px;
+        height: 40px;
         margin-left:15px;
         display:inline-block;
-    }
-    .searchbar-input{
-        border-radius:20px!important;
+        border-radius:10px!important;
     }
     .bar-button{
         top:-10px!important;
