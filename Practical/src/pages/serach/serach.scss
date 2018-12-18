@@ -37,4 +37,15 @@ page-serach {
             padding-right:15px;
         }
     }
+    li{
+        list-style: none;
+        float: left;
+        height: 40px;
+        border-radius:5px;
+        margin-top:10px !important;
+        margin-left:10px!important;
+        background-color:#f4f4f4;
+        text-align:center;
+        line-height: 40px;
+    }
 }

@@ -1,11 +1,8 @@
 <ion-header>
   <ion-navbar no-border>
-      <input type="search" placeholder="重庆鸡公煲" name="food" autocomplete="on" list="names" results /> 
+      <input type="search" placeholder="重庆鸡公煲" name="food" autocomplete="on" list="names" results [(ngModel)]='txt' (keydown)="getValue($event)"/> 
       <datalist id="names"> 
-        <option>大龙虾</option> 
-        <option>麻辣香锅</option> 
-        <option>烤鱼</option> 
-        <option>烧烤</option> 
+        <option *ngFor="let item of menu">{{item}}</option>
       </datalist> 
       <span>搜索</span>
   </ion-navbar>
@@ -27,18 +24,8 @@
     <ion-col>绝味九九鸭脖</ion-col>
   </ion-row>
 </ion-grid>
-<p class='txt'>历史记录<ion-icon ios="ios-trash" md="md-trash"></ion-icon></p>
-<ion-grid>
-  <ion-row>
-    <ion-col>绍兴排骨饭</ion-col>
-    <ion-col>重庆鸡公煲</ion-col>
-    <ion-col>万州烤鱼</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>养生粥</ion-col>
-    <ion-col>汉堡</ion-col>
-    <ion-col>麻辣香锅</ion-col>
-    <ion-col>水煮肉片</ion-col>
-  </ion-row>
-</ion-grid>
+<p class='txt'>历史记录<ion-icon ios="ios-trash" md="md-trash" (click)="clear()"></ion-icon></p>
+<ul>
+    <li *ngFor="let item of arr">{{item}}</li>
+</ul>
 </ion-content>
