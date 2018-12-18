@@ -7,13 +7,13 @@
 
 <ion-content>
     <div id='image' (click)='go()'>
-        <img src="../../assets/imgs/ali.jpg" alt="">
+        <img src={{headsrc}} alt="">
         <p>点击上传头像</p>
     </div>
     <ion-list>
         <ion-item>
             我的昵称
-            <input id="input" item-content type='text' placeholder="{{username}}" style="border:none" value="" #Newname>
+            <input id="input" item-content type='text' placeholder="{{name}}" style="border:none" value="" #Newname>
         </ion-item>
         <ion-item>
             <ion-label>我的生日</ion-label>

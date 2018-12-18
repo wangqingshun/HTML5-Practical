@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
 import { SettingPage } from '../setting/setting';
 import { MyDataPage } from '../my-data/my-data';
 import { WorksPage } from '../works/works';
@@ -24,14 +25,23 @@ import { AboutUsPage } from '../about-us/about-us';
   templateUrl: 'person.html',
 })
 export class PersonPage {
-  public Newname:string;
+  name:string;
+  headsrc:string;
+  phone:string;
   ionViewWillEnter(){
-    this.Newname= window.localStorage.getItem('username');
+    
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
+    this.phone= window.localStorage.getItem('username');
+    this.http.post('/api/person',{phone:this.phone}).subscribe((data)=>{
+      var obj=JSON.parse(data['_body'])[0];
+      console.log(obj);
+      this.name=obj.name;
+      this.headsrc=obj.head;
+    })
   }
   goData(){
-    this.navCtrl.push(MyDataPage);
+    this.navCtrl.push(MyDataPage,{name:this.name,headsrc:this.headsrc});
   }
   goWork(){
     this.navCtrl.push(WorksPage);

@@ -16,14 +16,15 @@ import { NoticeService } from '../../services/NoticeService.service'
   templateUrl: 'my-data.html',
 })
 export class MyDataPage {
-  public username:string;
+  username:string;
   some;
   item;
   occ;
   side;
   sides;
   sex;
-  Newname;
+  name;
+  headsrc;
   month=[1,2,3,4,5,6,7,8,9,10,11,12];
   year=[1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004];
   countryside=["北京市","天津市","上海市","重庆市","河北省","山西省","辽宁省","吉林省","黑龙江省",
@@ -80,7 +81,10 @@ export class MyDataPage {
   // }
   constructor(public navCtrl: NavController, public navParams: NavParams,
      private notiSer: NoticeService,private imgSer: ImgService
-    ) {}
+    ) {
+      this.name=this.navParams.get('name');
+      this.headsrc=this.navParams.get('headsrc');
+    }
  
 
 // 初始化上传图片的服务 

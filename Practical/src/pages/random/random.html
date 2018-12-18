@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ul id="nav">
+  <!-- <ul id="nav">
     <li>筛选
         <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
       <ul class='leval1'>
@@ -38,10 +38,10 @@
         <li>其他</li>
       </ul>
     </li>
-  </ul>
+  </ul> -->
 
   <div class='result'>
-    <p>结果看这里</p>
+    <p>结果看这里:{{item}}</p>
   </div>
-  <button>开始</button>
+  <button (click)="start()">开始</button>
 </ion-content>
