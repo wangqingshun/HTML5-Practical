@@ -1,0 +1,36 @@
+<!--
+  Generated template for the NextPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="tran">
+    <ion-title>忘记密码</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="box">
+      <ion-list>
+          <p style="color:black;">验证码将发送到:</p>
+          <ion-item>
+              <ion-icon name="paper" item-start></ion-icon>
+              <ion-input type="number" placeholder="手机号" #phone></ion-input>      
+          </ion-item>
+          <button ion-button color="tom" class="btn">获取验证码</button>
+          <ion-item>
+              <ion-icon name="md-lock" item-start></ion-icon>
+              <ion-input type="text" placeholder="验证码"  #yanzhengma></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-icon name="md-lock" item-start></ion-icon>
+              <ion-input type="password" placeholder="请设置新密码" id="rpsw" #rpasssword></ion-input>
+          </ion-item>
+      </ion-list>
+      <button ion-button color="tom" full>确认</button>
+  </div>
+</ion-content>

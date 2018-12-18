@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SerachPage } from '../serach/serach';
-
+import { Http } from '@angular/http'
 /**
  * Generated class for the Tuijian1Page page.
  *
@@ -15,12 +15,20 @@ import { SerachPage } from '../serach/serach';
   templateUrl: 'tuijian1.html',
 })
 export class Tuijian1Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  arr;
+  f(x){
+    this.http.get("/api/home/xiangqing/"+x).subscribe((data)=>{
+      this.arr=JSON.parse(data["_body"]);
+    })
+  }
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
+    this.http.get("/api/home/xiangqing/1").subscribe((data)=>{
+      this.arr=JSON.parse(data["_body"]);
+    })
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tuijian1Page');
+    
   }
   search(){
     this.navCtrl.push(SerachPage);
