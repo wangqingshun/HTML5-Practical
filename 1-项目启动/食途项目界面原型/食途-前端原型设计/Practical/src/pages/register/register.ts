@@ -1,4 +1,5 @@
 ///<reference path="../../alert/alert.d.ts"/>  
+///<reference path="../../alert/gVerify.d.ts"/>
 import { Component } from '@angular/core';
 import { App,IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
@@ -20,33 +21,30 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class RegisterPage {
   phone;
+  verifyCode;
   psw;
   rpsw;
   src;
   x=Math.ceil(Math.random()*7);
   constructor(public app:App,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
-    this.src="../../assets/imgs/yanzhengma"+this.x+".jpg";
-
+    //this.src="../../assets/imgs/yanzhengma"+this.x+".jpg";
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad RegisterPage');
-  }
-  f(){
-    this.x=Math.ceil(Math.random()*7);
-    this.src="../../assets/imgs/yanzhengma"+this.x+".jpg";
+    
+    this.verifyCode = new GVerify("gVerify");
   }
   goLogin(phone:HTMLInputElement,yanzheng:HTMLInputElement,password:HTMLInputElement,rpassword:HTMLInputElement){
-    var arr=["9#jw","hmzu","v9am","7wob","3n3D","m8k2","dwse"];
-    var yanzhengma=yanzheng.value.toLocaleLowerCase();
+    var img='../../assets/imgs/duihao.jpg';
+    var yanzhengma=yanzheng.value;
     if(phone.value.length!=11){
-      Alert("请输入正确的手机号");
+      Alert("请输入正确的手机号",img);
     }else if(password.value!=rpassword.value){
-      Alert("两次输入的密码不一致");
-    }else if(yanzhengma != arr[this.x-1]){
-      Alert("验证码错误");
-    }
-    else{
+      Alert("两次输入的密码不一致",img);
+    }else if(!this.verifyCode.validate(yanzhengma)){
+      Alert("验证码错误",img);
+    }else{
       this.http.post('/api/reg',{phone:phone.value,psw:password.value}).subscribe((data)=>{
         console.log(data);
         //this.app.getRootNavs()[0].setRoot(LoginPage);
@@ -57,7 +55,7 @@ export class RegisterPage {
         }
         else if(obj['code'] == 1){
           Alert(obj['msg']+"三秒钟跳转到登录页");
-          this.app.getRootNavs()[0].setRoot("LoginPage");
+          this.app.getRootNavs()[0].setRoot(LoginPage);
         }
         else{
           Alert(obj['msg']);

@@ -35,13 +35,12 @@ export class PersonPage {
     this.phone= window.localStorage.getItem('username');
     this.http.post('/api/person',{phone:this.phone}).subscribe((data)=>{
       var obj=JSON.parse(data['_body'])[0];
-      console.log(obj);
       this.name=obj.name;
       this.headsrc=obj.head;
     })
   }
   goData(){
-    this.navCtrl.push(MyDataPage,{name:this.name,headsrc:this.headsrc});
+    this.navCtrl.push(MyDataPage,{phone:this.phone,name:this.name,headsrc:this.headsrc});
   }
   goWork(){
     this.navCtrl.push(WorksPage);
@@ -71,7 +70,7 @@ export class PersonPage {
     this.navCtrl.push(AboutUsPage);
   }
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad PersonPage');
+    console.log('PersonPage');
   }
 
 }

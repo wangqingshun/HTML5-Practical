@@ -1,7 +1,7 @@
 <ion-header no-border>
     <ion-navbar color="tom">
         <ion-title>个人资料</ion-title>
-        <ion-icon ios="ios-checkmark" md="md-checkmark" (click)='store(Newname)'></ion-icon>
+        <ion-icon ios="ios-checkmark" md="md-checkmark" (click)='put(Newname)'></ion-icon>
     </ion-navbar>
 </ion-header>
 
@@ -13,38 +13,38 @@
     <ion-list>
         <ion-item>
             我的昵称
-            <input id="input" item-content type='text' placeholder="{{name}}" style="border:none" value="" #Newname>
+            <input id="input" item-content type='text' placeholder={{name}} style="border:none"  #Newname>
         </ion-item>
         <ion-item>
             <ion-label>我的生日</ion-label>
-            <ion-select [(ngModel)]="item" okText="确定" cancelText="取消" (ionChange)="getYear(item)">
+            <ion-select [(ngModel)]="item" okText="确定" cancelText="取消" >
                 <ion-option *ngFor="let item of year" value={{item}}>{{item}}</ion-option>
             </ion-select>
-            <ion-select [(ngModel)]="some" okText="确定" cancelText="取消" (ionChange)="getMonth(some)">
+            <ion-select [(ngModel)]="some" okText="确定" cancelText="取消" >
                 <ion-option *ngFor="let some of month" [value]="some">{{some}}</ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>我的职业</ion-label>
-            <ion-select [(ngModel)]="occ" okText="确定" cancelText="取消" (ionChange)="getOcc(occ)">
+            <ion-select [(ngModel)]="occ" okText="确定" cancelText="取消" >
                 <ion-option *ngFor="let occ of occupation" value={{occ}}>{{occ}}</ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>我的家乡</ion-label>
-            <ion-select [(ngModel)]="side" okText="确定" cancelText="取消" (ionChange)="getSide(side)">
+            <ion-select [(ngModel)]="side" okText="确定" cancelText="取消" >
                 <ion-option *ngFor="let side of countryside" value={{side}}>{{side}}</ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>常居</ion-label>
-            <ion-select [(ngModel)]="sides" okText="确定" cancelText="取消" (ionChange)="getSides(sides)">
+            <ion-select [(ngModel)]="sides" okText="确定" cancelText="取消" >
                 <ion-option *ngFor="let sides of countryside" value={{sides}}>{{sides}}</ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>性别</ion-label>
-            <ion-select [(ngModel)]="sex" okText="确定" cancelText="取消" (ionChange)='getSex(sex)'>
+            <ion-select [(ngModel)]="sex" okText="确定" cancelText="取消" >
                 <ion-option *ngFor='let sex of gender' value={{sex}}>{{sex}}</ion-option>
             </ion-select>
         </ion-item>

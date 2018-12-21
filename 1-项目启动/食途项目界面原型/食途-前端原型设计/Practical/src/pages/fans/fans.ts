@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthorPage } from '../author/author';
-
 /**
  * Generated class for the FansPage page.
  *
@@ -25,7 +24,7 @@ export class FansPage {
     this.navCtrl.push(AuthorPage,{id:i});
   }
   ionViewDidLoad() {
-   // console.log('ionViewDidLoad FansPage');
+    console.log('ionViewDidLoad FansPage');
   }
 
 }

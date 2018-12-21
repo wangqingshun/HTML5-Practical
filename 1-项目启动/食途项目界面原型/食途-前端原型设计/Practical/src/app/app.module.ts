@@ -47,6 +47,8 @@ import { NoticeService } from '../services/NoticeService.service';
 import { File } from '@ionic-native/file';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { AuthorPage } from '../pages/author/author';
+import { NextPage } from '../pages/next/next'
+
 
 @NgModule({
   declarations: [
@@ -82,7 +84,8 @@ import { AuthorPage } from '../pages/author/author';
     SerachPage,
     CdetailPage,
     AddPage,
-    AuthorPage
+    AuthorPage,
+    NextPage
   ],
   imports: [
     BrowserModule,
@@ -127,7 +130,8 @@ import { AuthorPage } from '../pages/author/author';
     SerachPage,
     CdetailPage,
     AddPage,
-    AuthorPage
+    AuthorPage,
+    NextPage
   ],
   providers: [
     StatusBar,

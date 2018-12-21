@@ -17,8 +17,8 @@
                 <ion-input type="text" placeholder="验证码" #yanzheng></ion-input>
                 <!-- <button ion-button color="tom" item-end>获取验证码</button> -->
             </ion-item>
-            <img src={{src}} alt="验证码">
-            <p class="c1" (click)="f()">看不清？换一张</p>
+            <div id="gVerify"></div>
+            <!-- 验证码 -->
             <ion-item>
                 <ion-icon name="md-lock" item-start></ion-icon>
                 <ion-input type="password" placeholder="请输入密码" name="psw" id="psw"   required #password></ion-input>

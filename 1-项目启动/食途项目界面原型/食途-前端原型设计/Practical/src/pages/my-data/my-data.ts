@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //import { AlertController } from 'ionic-angular';
 import { ImgService } from '../../services/ImgService.service';
 import { NoticeService } from '../../services/NoticeService.service'
+import { Http } from '@angular/http';
 /**
  * Generated class for the MyDataPage page.
  *
@@ -17,6 +18,7 @@ import { NoticeService } from '../../services/NoticeService.service'
 })
 export class MyDataPage {
   username:string;
+  phone;
   some;
   item;
   occ;
@@ -33,57 +35,34 @@ export class MyDataPage {
   "西藏自治区","宁夏回族自治区","新疆维吾尔自治区","香港特别行政区","澳门特别行政区"];
   occupation=["学生","教师","医生","个体商人","其他"];
   gender=["女","男"];
-  
-  // store(Newname: HTMLInputElement){
-  //   window.localStorage.setItem('Newname',Newname.value);
-  // }
-  getYear(val){
-    window.localStorage.setItem('year',val);
-  }
-  getMonth(val){
-    window.localStorage.setItem('month',val);
-  }
-  getOcc(val){
-    window.localStorage.setItem('Occ',val);
-  }
-  getSide(val){
-    window.localStorage.setItem('side',val);
-  }
-  getSides(val){
-    window.localStorage.setItem('sides',val);
-  }
-  getSex(val){
-    window.localStorage.setItem('sex',val);
+  put(Newname:HTMLInputElement){
+    this.name=Newname.value==''? this.name:Newname.value;
+    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,zhuzhi:this.side,sex:this.sex}).subscribe((data)=>{
+      var obj=JSON.parse(data['_body']);
+      if(obj.code==200){
+        console.log("修改成功");
+      }else{
+        console.log("操作错误");
+      }
+    })
   }
   ionViewWillEnter(){
-    this.username= window.localStorage.getItem('username');
-    //this.Newname=window.localStorage.getItem('Newname');
-    this.some=window.localStorage.getItem('month');
-    this.item=window.localStorage.getItem('year');
-    this.occ=window.localStorage.getItem('Occ');
-    this.side=window.localStorage.getItem('side');
-    this.sides=window.localStorage.getItem('sides');
-    this.sex=window.localStorage.getItem('sex');
   }
-  // clear(){
-  //   window.localStorage.removeItem('month');
-  //   this.some=null;
-  //   window.localStorage.removeItem('year');
-  //   this.item=null;
-  //   window.localStorage.removeItem('Occ');
-  //   this.occ=null;
-  //   window.localStorage.removeItem('side');
-  //   this.side=null;
-  //   window.localStorage.removeItem('sides');
-  //   this.sides=null;
-  //   window.localStorage.removeItem('sex');
-  //   this.sex=null;
-  // }
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  constructor(public navCtrl: NavController, public http :Http,public navParams: NavParams,
      private notiSer: NoticeService,private imgSer: ImgService
     ) {
       this.name=this.navParams.get('name');
       this.headsrc=this.navParams.get('headsrc');
+      this.phone=this.navParams.get('phone');
+      this.http.get('/api/data',{params:{phone:this.phone}}).subscribe((data)=>{
+        var obj=JSON.parse(data['_body'])[0];
+        this.name=obj.name;
+        this.item=obj.year;
+        this.some=obj.month;
+        this.occ=obj.zhiye;
+        this.side=obj.zhuzhi;
+        this.sex=obj.sex;
+      })
     }
  
 

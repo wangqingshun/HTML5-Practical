@@ -14,9 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'next.html',
 })
 export class NextPage {
-  phone=123;
+  public phone:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    //var val=this.navParams.get('phone');
+    var val=this.navParams.get('phone');
+    this.phone=val;
   }
 
   ionViewDidLoad() {
