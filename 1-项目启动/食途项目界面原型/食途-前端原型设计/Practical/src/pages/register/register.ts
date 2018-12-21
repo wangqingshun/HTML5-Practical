@@ -36,29 +36,30 @@ export class RegisterPage {
     this.verifyCode = new GVerify("gVerify");
   }
   goLogin(phone:HTMLInputElement,yanzheng:HTMLInputElement,password:HTMLInputElement,rpassword:HTMLInputElement){
-    var img='../../assets/imgs/duihao.jpg';
+    var img1='../../assets/imgs/dui.png';
+    var img2='../../assets/imgs/cuo.png';
     var yanzhengma=yanzheng.value;
     if(phone.value.length!=11){
-      Alert("请输入正确的手机号",img);
+      Alert("请输入正确的手机号",img2);
     }else if(password.value!=rpassword.value){
-      Alert("两次输入的密码不一致",img);
+      Alert("两次输入的密码不一致",img2);
     }else if(!this.verifyCode.validate(yanzhengma)){
-      Alert("验证码错误",img);
+      Alert("验证码错误",img2);
     }else{
       this.http.post('/api/reg',{phone:phone.value,psw:password.value}).subscribe((data)=>{
         console.log(data);
         //this.app.getRootNavs()[0].setRoot(LoginPage);
         var obj=JSON.parse(data['_body']);
         if(obj['code'] == 200){
-          Alert(obj['msg']+"三秒钟跳转到首页");
+          Alert(obj['msg']+"三秒钟跳转到首页",img1);
           this.app.getRootNavs()[0].setRoot(TabsPage);
         }
         else if(obj['code'] == 1){
-          Alert(obj['msg']+"三秒钟跳转到登录页");
+          Alert(obj['msg']+"三秒钟跳转到登录页",img2);
           this.app.getRootNavs()[0].setRoot(LoginPage);
         }
         else{
-          Alert(obj['msg']);
+          Alert(obj['msg'],img2);
         }
       })
     }

@@ -1,3 +1,4 @@
+///<reference path="../../alert/alert.d.ts"/> 
 import { Component } from '@angular/core';
 import {App, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
@@ -30,7 +31,7 @@ export class LoginPage {
   }
   logIn(username: HTMLInputElement, password : HTMLInputElement){
     if (username.value == "" || password.value == "") {
-      alert("账户或密码不能为空");
+      Alert("账户或密码不能为空",'../../assets/imgs/cuo.png');
     } 
     else{
       this.http.post('/api/login',{phone:username.value,psw:password.value}).subscribe((data)=>{
@@ -43,7 +44,7 @@ export class LoginPage {
           this.app.getRootNavs()[0].setRoot(TabsPage);
         }
         else{
-          alert(obj['msg']);
+          Alert(obj['msg'],'../../assets/imgs/cuo.png');
         }
       })
     }

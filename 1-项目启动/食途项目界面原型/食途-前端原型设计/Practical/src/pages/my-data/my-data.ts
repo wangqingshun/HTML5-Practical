@@ -60,7 +60,7 @@ export class MyDataPage {
         this.item=obj.year;
         this.some=obj.month;
         this.occ=obj.zhiye;
-        this.side=obj.zhuzhi;
+        this.side=obj.dizhi;
         this.sex=obj.sex;
       })
     }
