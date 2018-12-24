@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ImgService } from '../../services/ImgService.service';
 import { NoticeService } from '../../services/NoticeService.service'
 import { Http } from '@angular/http';
+import { ReviceServeProvider } from '../../providers/revice-serve/revice-serve';
 /**
  * Generated class for the MyDataPage page.
  *
@@ -15,8 +16,10 @@ import { Http } from '@angular/http';
 @Component({
   selector: 'page-my-data',
   templateUrl: 'my-data.html',
+  providers: [ ReviceServeProvider]
 })
 export class MyDataPage {
+  listData = [];
   username:string;
   phone;
   some;
@@ -48,7 +51,7 @@ export class MyDataPage {
   }
   ionViewWillEnter(){
   }
-  constructor(public navCtrl: NavController, public http :Http,public navParams: NavParams,
+  constructor(public navCtrl: NavController, public http :Http,public navParams: NavParams,private reviceServe: ReviceServeProvider,
      private notiSer: NoticeService,private imgSer: ImgService
     ) {
       this.name=this.navParams.get('name');
@@ -64,7 +67,17 @@ export class MyDataPage {
         this.sex=obj.sex;
       })
     }
- 
+    ionViewDidLoad() {
+      this.getRequestContact();
+    }
+    getRequestContact() { 
+      this.reviceServe.getRequestContact().subscribe(res => { 
+        this.listData = res.json(); 
+        console.log(this.listData);
+      }, error => { 
+        console.log(error); 
+      }) 
+    } 
 
 // 初始化上传图片的服务 
 private initImgSer() {

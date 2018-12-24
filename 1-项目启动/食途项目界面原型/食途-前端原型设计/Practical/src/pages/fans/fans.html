@@ -13,21 +13,10 @@
 
 <ion-content>
     <ion-list>
-        <ion-item >
+        <ion-item>
             <a class="item item-avatar" href="#" *ngFor='let item of fan' (click)='fans(item.id)'>
                 <img src={{item.src}}>
                 <div class="it">
-                    <h2>Venkman</h2>
-                    <p>Back off, man. I'm a scientist.</p>
-                </div>
-            </a>
-        </ion-item>
-        <ion-item detail-push>
-            <a class="item item-avatar" href="#">
-                <img src="http://www.runoob.com/try/demo_source/venkman.jpg">
-                <div class="it">
-                    <h2>Venkman</h2>
-                    <p>Back off, man. I'm a scientist.</p>
                     <h2>{{item.h2}}</h2>
                     <p>{{item.p}}</p>
                 </div>

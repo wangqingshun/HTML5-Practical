@@ -47,7 +47,9 @@ import { NoticeService } from '../services/NoticeService.service';
 import { File } from '@ionic-native/file';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { AuthorPage } from '../pages/author/author';
-import { NextPage } from '../pages/next/next'
+import { NextPage } from '../pages/next/next';
+import { MultiPickerModule} from 'ion-multi-picker';
+import { ReviceServeProvider } from '../providers/revice-serve/revice-serve';
 
 
 @NgModule({
@@ -90,6 +92,7 @@ import { NextPage } from '../pages/next/next'
   imports: [
     BrowserModule,
     ServiceModule,
+    MultiPickerModule,
     HttpModule,
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages: 'true'
@@ -142,7 +145,8 @@ import { NextPage } from '../pages/next/next'
     ImagePicker,
     NoticeService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FileTransfer
+    FileTransfer,
+    ReviceServeProvider
   ]
 })
 export class AppModule {}
