@@ -69,6 +69,16 @@ page-video {
         list-style: none;
         height: 130px;
     }
+    textarea{
+        width: 90%;
+        position: fixed;
+        bottom: 75px;
+    }
+    #push{
+        position: fixed;
+        bottom: 75px;
+        right: 1%;
+    }
     ion-item{
         img{
             height: 25px;

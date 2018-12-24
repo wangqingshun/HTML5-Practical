@@ -68,4 +68,9 @@ export class VideoPage {
   share(){
     alert("转发该消息");
   }
+  EvaluateInfo = {content: ''};
+push(){
+  console.log(this.EvaluateInfo.content)
+  this.EvaluateInfo.content='';
+}
 }

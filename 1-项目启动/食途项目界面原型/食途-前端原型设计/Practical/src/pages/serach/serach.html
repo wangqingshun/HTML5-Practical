@@ -1,10 +1,10 @@
 <ion-header>
   <ion-navbar no-border>
-      <input type="search" placeholder="重庆鸡公煲" name="food" autocomplete="on" list="names" results [(ngModel)]='txt' (keydown)="getValue($event)"/> 
+      <input type="search" placeholder="重庆鸡公煲" name="food" autocomplete="on" list="names" results [(ngModel)]='txt'/> 
       <datalist id="names"> 
         <option *ngFor="let item of menu">{{item}}</option>
       </datalist> 
-      <span>搜索</span>
+      <span (click)="search()">搜索</span>
   </ion-navbar>
 </ion-header>
 <ion-content>
