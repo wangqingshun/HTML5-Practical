@@ -16,6 +16,7 @@ import { Http} from '@angular/http';
 })
 export class VideoPage {
   id;
+  x_id;
   video;
   videosrc;
   touxiang;
@@ -24,11 +25,12 @@ export class VideoPage {
   count1=123;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
     this.id=navParams.get('id');
-    this.http.get('/api/share/video/'+this.id).subscribe((data)=>{
-      this.video=JSON.parse(data["_body"]);
-      this.videosrc=this.video.videosrc;
-      this.touxiang=this.video.touxiang;
-      this.name=this.video.name;
+    this.x_id=navParams.get('x_id');
+    this.http.get('/api/share/video/'+this.x_id,{"params":{id:this.id,x_id:this.x_id}}).subscribe((data)=>{
+      this.video=JSON.parse(data["_body"])[0][0];
+      this.videosrc=this.video.src;
+      this.touxiang=JSON.parse(data["_body"])[1][0].head;
+      this.name=JSON.parse(data["_body"])[1][0].name;
     })
   }
   changeImg(like:HTMLInputElement){

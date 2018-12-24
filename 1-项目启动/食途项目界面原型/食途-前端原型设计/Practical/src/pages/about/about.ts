@@ -21,7 +21,6 @@ export class AboutPage {
   arr=["视频","文章","关注"];
   constructor(public navCtrl: NavController,public http:Http) {
     this.http.get('/api/share').subscribe((data)=>{
-        //console.log(data);
        var obj=JSON.parse(data["_body"]);
        this.vido=obj[0];
        this.article=obj[1];
@@ -30,11 +29,11 @@ export class AboutPage {
   ionViewDidLoad() {
     
   }
-  goVideo(x){
-    this.navCtrl.push(VideoPage,{id:x});
+  goVideo(x_id,id){
+    this.navCtrl.push(VideoPage,{x_id:x_id,id:id});
   }
-  goArticle(x){
-    this.navCtrl.push(ArticlePage,{id:x});
+  goArticle(x_id,id){
+    this.navCtrl.push(ArticlePage,{x_id:x_id,id:id});
   }
   goAdd(){
     this.navCtrl.push(AddPage);
