@@ -39,8 +39,9 @@ export class MyDataPage {
   occupation=["学生","教师","医生","个体商人","其他"];
   gender=["女","男"];
   put(Newname:HTMLInputElement){
+    console.log(this.side);
     this.name=Newname.value==''? this.name:Newname.value;
-    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,zhuzhi:this.side,sex:this.sex}).subscribe((data)=>{
+    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,dizhi:this.side,changju:this.sides,sex:this.sex}).subscribe((data)=>{
       var obj=JSON.parse(data['_body']);
       if(obj.code==200){
         console.log("修改成功");
@@ -64,6 +65,7 @@ export class MyDataPage {
         this.some=obj.month;
         this.occ=obj.zhiye;
         this.side=obj.dizhi;
+        this.sides=obj.changju;
         this.sex=obj.sex;
       })
     }

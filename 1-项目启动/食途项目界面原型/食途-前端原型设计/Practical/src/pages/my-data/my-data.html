@@ -32,11 +32,11 @@
         </ion-item>
         <ion-item>
             <ion-label>我的家乡</ion-label>
-            <ion-multi-picker item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消"></ion-multi-picker>
+            <ion-multi-picker [(ngModel)]="side" item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消" [(ngModel)]="side">{{side}}</ion-multi-picker>
         </ion-item>
         <ion-item>
             <ion-label>常居</ion-label>
-            <ion-multi-picker item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消"></ion-multi-picker>
+            <ion-multi-picker [(ngModel)]="sides" item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消" [(ngModel)]="sides">{{sides}}</ion-multi-picker>
         </ion-item>
         <ion-item>
             <ion-label>性别</ion-label>

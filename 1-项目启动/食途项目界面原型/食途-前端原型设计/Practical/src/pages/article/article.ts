@@ -15,6 +15,8 @@ import { Http } from '@angular/http';
   templateUrl: 'article.html',
 })
 export class ArticlePage {
+  touxiang;
+  person;
   name ;
   imgsrc ;
   buzhou ;
@@ -22,12 +24,14 @@ export class ArticlePage {
   zhuliao ;
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     var id=this.navParams.get('id');
-    this.http.get('/api/share/article/'+id).subscribe((data)=>{
-      var obj=JSON.parse(data['_body']);
-      console.log(obj.zhuliao);
+    var x_id=this.navParams.get('x_id');
+    this.http.get('/api/share/article/'+id,{"params":{id:id,x_id:x_id}}).subscribe((data)=>{
+      var obj=JSON.parse(data['_body'])[0][0];
+      this.touxiang=JSON.parse(data['_body'])[1][0].head;
+      this.person=JSON.parse(data['_body'])[1][0].name;
       this.name = obj.name;
-      this.imgsrc = obj.imgsrc;
-      this.buzhou = obj.buzhou;
+      this.imgsrc = obj.src;
+      this.buzhou = obj.buzhou.split(";");
       this.fuliao = obj.fuliao;
       this.zhuliao = obj.zhuliao; 
     })
