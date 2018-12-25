@@ -27,7 +27,4 @@ arr=["消息","通知"];
   goGood(){
     this.navCtrl.push(GoodPage);
   }
-  goSearch(){
-    this.navCtrl.push(SerachPage);
-  }
 }
