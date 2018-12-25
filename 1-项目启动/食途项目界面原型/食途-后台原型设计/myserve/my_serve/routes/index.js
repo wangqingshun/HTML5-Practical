@@ -68,4 +68,7 @@ router.get('/reg', function(req, res, next) {
       connection.release();
 });
 })
+router.get('/',function(req,res){
+	res.render('home', { title: 'Chat' });
+})
 module.exports = router;
