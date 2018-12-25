@@ -2,7 +2,7 @@
   <div class="title">
     <ul>
       <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
-      <span class='add' (click)="goAdd()"> <img src="assets/imgs/add.png" alt=""></span>
+      <span class="add" (click)="goAdd()"> <img src="assets/imgs/add.png" alt=""></span>
     </ul>
   </div>
   <ion-searchbar placeholder="搜索" (click)="goSearch()"></ion-searchbar>
@@ -12,20 +12,20 @@
   <div [ngSwitch]="isActive">
     <div *ngSwitchCase="0">
       <ul class="video">
-        <li *ngFor="let item of vido" (click)="goVideo(item.id)">
+        <li *ngFor="let item of vido" (click)="goVideo(item.x_id,item.id)">
           <img src="{{item.src}}" alt="">
         </li>
       </ul>
     </div>
     <div *ngSwitchCase="1">
       <ul class="article">
-        <li *ngFor="let item of article" (click)="goArticle(item.id)">
+        <li *ngFor="let item of article" (click)="goArticle(item.x_id,item.id)">
           <div class="artimg"><img src={{item.src}} alt=""></div>
           <div class="artcon">
             <h5>{{item.name}}</h5>
-            <p>{{item.p}}</p>
-            <p>使用的厨具:{{item.tool}}</p>
-            <p>所属分类：{{item.type}}</p>
+            <p>{{item.jianjie}}</p>
+            <!-- <p>使用的厨具:{{item.tool}}</p>
+            <p>所属分类：{{item.type}}</p> -->
           </div>
         </li>
       </ul>

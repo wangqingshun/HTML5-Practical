@@ -21,6 +21,8 @@ export class VideoPage {
   videosrc;
   touxiang;
   name;
+  flage=true;
+  pinglun;
   count=0;
   count1=123;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
@@ -31,6 +33,10 @@ export class VideoPage {
       this.videosrc=this.video.src;
       this.touxiang=JSON.parse(data["_body"])[1][0].head;
       this.name=JSON.parse(data["_body"])[1][0].name;
+    });
+    this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
+      this.pinglun=JSON.parse(data['_body']);
+      console.log(this.pinglun);
     })
   }
   changeImg(like:HTMLInputElement){
@@ -53,12 +59,12 @@ export class VideoPage {
     }
   }
   perComment(){
-    this.count++;
     var com=document.getElementsByClassName("com")[0] as HTMLElement;
-    if(this.count%2==0){
-      com.style.display='none';
-    }else{
+    if(this.flage){
       com.style.display='block';
+      this.flage=false;
+    }else{
+      com.style.display='none';
     }
   }
   ionViewDidLoad() {
@@ -71,8 +77,15 @@ export class VideoPage {
     alert("转发该消息");
   }
   EvaluateInfo = {content: ''};
-push(){
-  console.log(this.EvaluateInfo.content)
-  this.EvaluateInfo.content='';
-}
+  push(){
+    console.log(this.EvaluateInfo.content);
+    this.http.post('/api/pinglun',{id:this.id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
+      console.log(data);
+      this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
+        this.pinglun=JSON.parse(data['_body']);
+        console.log(this.pinglun);
+      })
+    })
+    this.EvaluateInfo.content='';
+  }
 }
