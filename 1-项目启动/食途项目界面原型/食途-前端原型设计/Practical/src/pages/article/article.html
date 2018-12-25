@@ -27,7 +27,21 @@
 <ion-footer>
     <div class="com">
         <ul>
-            <li>
+            <li *ngFor="let item of pinglun">
+                <div class="per">
+                    <div class="p"><img src="{{item.head}}" alt=""></div>
+                    <div class="name">
+                        <h5>
+                            {{item.name}}
+                        </h5>
+                    </div>
+                    <div style="float:left;margin-top:20px;margin-left:30px;">
+                        {{item.time}}
+                    </div>
+                </div>
+                <div class="pcom">{{item.neirong}}</div>
+            </li>
+            <!-- <li>
                 <div class="per">
                     <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
                     <div class="name">
@@ -48,9 +62,10 @@
                     </div>
                 </div>
                 <div class="pcom">可以尝试一下</div>
-            </li>
+            </li> -->
         </ul>
-        <textarea [(ngModel)]="EvaluateInfo.content"  value="content" name="content" placeholder="说点什么······"></textarea><span id="push" (click)="push()">发送</span>
+        <textarea [(ngModel)]="EvaluateInfo.content" value="content" name="content" placeholder="说点什么······"></textarea><span
+            id="push" (click)="push()">发送</span>
     </div>
     <ion-list>
         <ion-item>
