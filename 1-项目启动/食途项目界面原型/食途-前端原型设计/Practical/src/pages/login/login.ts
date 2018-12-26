@@ -35,12 +35,12 @@ export class LoginPage {
     } 
     else{
       this.http.post('/api/login',{phone:username.value,psw:password.value}).subscribe((data)=>{
-        console.log(data);
         var obj = JSON.parse(data['_body']);
         if(obj['code'] == 200){
           console.log(obj['msg']);
           window.localStorage.setItem('username',username.value);
           window.localStorage.setItem('password',password.value);
+          window.localStorage.setItem('id',obj['id']);
           this.app.getRootNavs()[0].setRoot(TabsPage);
         }
         else{

@@ -26,6 +26,7 @@ export class SettingPage {
   logout() {
     window.localStorage.removeItem('username');
     window.localStorage.removeItem('password');
+    window.localStorage.removeItem('id');
     //this.navCtrl.setRoot(LoginPage);
     this.app.getRootNavs()[0].setRoot(LoginPage);
   }

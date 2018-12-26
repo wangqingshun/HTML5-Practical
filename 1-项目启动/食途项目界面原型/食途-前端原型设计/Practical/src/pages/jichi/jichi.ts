@@ -34,7 +34,7 @@ export class JichiPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad JichiPage');
+    //console.log('ionViewDidLoad JichiPage');
   }
 
 }
