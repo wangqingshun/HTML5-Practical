@@ -15,6 +15,8 @@ import { Http } from '@angular/http';
   templateUrl: 'article.html',
 })
 export class ArticlePage {
+  id;
+  x_id;
   touxiang;
   person;
   name ;
@@ -22,10 +24,12 @@ export class ArticlePage {
   buzhou ;
   fuliao ;
   zhuliao ;
+  flage=true;
+  pinglun;
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
-    var id=this.navParams.get('id');
-    var x_id=this.navParams.get('x_id');
-    this.http.get('/api/share/article/'+id,{"params":{id:id,x_id:x_id}}).subscribe((data)=>{
+    this.id=this.navParams.get('id');
+    this.x_id=this.navParams.get('x_id');
+    this.http.get('/api/share/article/'+this.id,{"params":{id:this.id,x_id:this.x_id}}).subscribe((data)=>{
       var obj=JSON.parse(data['_body'])[0][0];
       this.touxiang=JSON.parse(data['_body'])[1][0].head;
       this.person=JSON.parse(data['_body'])[1][0].name;
@@ -34,6 +38,10 @@ export class ArticlePage {
       this.buzhou = obj.buzhou.split(";");
       this.fuliao = obj.fuliao;
       this.zhuliao = obj.zhuliao; 
+    });
+    this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
+      this.pinglun=JSON.parse(data['_body']);
+      console.log(this.pinglun);
     })
   }
   count=0;
@@ -47,7 +55,7 @@ export class ArticlePage {
     }
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ArticlePage');
+    //console.log('ionViewDidLoad ArticlePage');
   }
   goAuthor(){
     this.navCtrl.push(AuthorPage);
@@ -64,12 +72,13 @@ export class ArticlePage {
     }
   }
   perComment(){
-    this.count++;
     var com=document.getElementsByClassName("com")[0] as HTMLElement;
-    if(this.count%2==0){
-      com.style.display='none';
-    }else{
+    if(this.flage){
       com.style.display='block';
+      this.flage=false;
+    }else{
+      com.style.display='none';
+      this.flage=true;
     }
   }
   share(){
@@ -77,7 +86,13 @@ export class ArticlePage {
   }
 EvaluateInfo = {content: ''};
 push(){
-  console.log(this.EvaluateInfo.content)
+  this.http.post('/api/pinglun',{id:this.id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
+    console.log(data);
+    this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
+      this.pinglun=JSON.parse(data['_body']);
+      //console.log(this.pinglun);
+    })
+  })
   this.EvaluateInfo.content='';
 }
 }
