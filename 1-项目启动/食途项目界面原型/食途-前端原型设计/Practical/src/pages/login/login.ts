@@ -48,24 +48,6 @@ export class LoginPage {
         }
       })
     }
-    /*else if(username.value == 'test' && password.value == '123123') {
-      window.localStorage.setItem('username',username.value);
-      window.localStorage.setItem('password',password.value);//保存登录时数据
-      this.navCtrl.setRoot(TabsPage);//跳转到登录后的页面
-      //this.app.getRootNavs()[0].setRoot(TabsPage);
-    }
-    // if (username.value == "" || password.value == "") {
-    //   this.presentToast("middle", "error", "账户或密码不能为空");
-    // } else if((AppConfig.USERNAME==username.value)&&(AppConfig.PASSWORD==password.value) ){
-    //   AppConfig.loginState = true;
-    //   this.checkRemember(username, password);  //保存用户信息
-    //   this.navCtrl.push(GuidePage);
-    // }
-    else  {
-      alert("账户或密码错误！");
- 
-    }
-    */
   }
 
 }

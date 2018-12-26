@@ -61,9 +61,6 @@ export class PersonPage {
   goSet(){
     this.navCtrl.push(SettingPage);
   }
-  // goEdit(){
-  //   this.navCtrl.push(EditionPage);
-  // }
   goUs(){
     this.navCtrl.push(AboutUsPage);
   }

@@ -3,15 +3,6 @@
         <ion-slide *ngFor="let item of lunbo" >
             <img src={{item.src}} alt={{item.p}}>
         </ion-slide>
-        <!-- <ion-slide>
-            <img src="../assets/imgs/ms.jpg">
-        </ion-slide>
-        <ion-slide>
-            <img src="../assets/imgs/ms1.jpg">
-        </ion-slide>
-        <ion-slide>
-            <img src="../assets/imgs/ms2.jpg">
-        </ion-slide> -->
     </ion-slides>
     <ion-grid class='tjlist'>
         <p class='tj'>
@@ -23,39 +14,12 @@
                 <img src={{item.src}} alt={{item.p}}>
                 <p>{{item.p}}</p>
             </ion-col >
-            <!-- <ion-col>
-                <img src="../assets/imgs/tj1.jpg">
-                <p>皮蛋瘦肉粥</p>
-            </ion-col>
-            <ion-col (click)='jc()'>
-                <img src="../assets/imgs/tj2.jpg">
-                <p>可乐鸡翅</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/tj3.jpg">
-                <p>鲜美鱼汤</p>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <img src="../assets/imgs/tj4.jpg">
-                <p>黑椒牛排</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/tj5.jpg">
-                <p>美味蛋糕</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/tj6.png">
-                <p>香辣汉堡</p>
-            </ion-col> -->
         </ion-row>
         <p class='change' (click)="huan(1)">
             <span>换一批</span>
             <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
         </p>
     </ion-grid>
-
     <ion-grid class='tjlist1'>
         <p class='tj'>
             <span>优秀食材</span>
@@ -66,39 +30,12 @@
                 <img src={{item.src}} alt={{item.p}}>
                 <p>{{item.p}}</p>
             </ion-col>
-            <!-- <ion-col (click)='td()'>
-                <img src="../assets/imgs/sc1.jpg">
-                <p>土豆</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/sc2.jpg">
-                <p>西蓝花</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/sc3.jpg">
-                <p>西红柿</p>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <img src="../assets/imgs/sc4.png">
-                <p>茄子</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/sc5.jpg">
-                <p>红薯</p>
-            </ion-col>
-            <ion-col>
-                <img src="../assets/imgs/sc6.jpg">
-                <p>菠菜</p>
-            </ion-col> -->
         </ion-row>
         <p class='change' (click)="huan(2)">
             <span>换一批</span>
             <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
         </p>
     </ion-grid>
-
     <ul class='eat'>
         <li class='txt'>不知道吃什么?</li>
         <li><img src="../assets/imgs/bq.jpg"></li>

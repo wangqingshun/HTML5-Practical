@@ -23,7 +23,6 @@ export class JichiPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     var id=this.navParams.get('id');
     this.http.get('/api/home/tuijian/'+id).subscribe((data)=>{
-      //console.log(data);
       var obj=JSON.parse(data['_body']);
       this.imgsrc=obj['src'];
       this.name=obj['name'];
@@ -35,7 +34,7 @@ export class JichiPage {
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad JichiPage');
+    console.log('ionViewDidLoad JichiPage');
   }
 
 }
