@@ -21,6 +21,7 @@ export class VideoPage {
   videosrc;
   touxiang;
   name;
+  zancount;
   flage=true;
   pinglun;
   count=0;
@@ -47,16 +48,26 @@ export class VideoPage {
       like.src="../assets/imgs/xing.png";
     }
   }
-  changeGood(good:HTMLInputElement,num:HTMLInputElement){
-    this.count++;
-    if(this.count%2==0){
-      good.src="../assets/imgs/like.png";
-      this.count1++;
-      // document.getElementsByClassName("num").innerHTML=this.count1;
-    }else{
-      good.src="../assets/imgs/heart.png";
-      this.count1--;
-    }
+  changeGood(heart:HTMLInputElement){
+    var A=document.getElementById('like1');
+    A.style.backgroundPosition=" ";
+    var D=$('#like1').attr("rel");
+    if(D === 'like') {
+      this.zancount++;
+      this.http.get('/api/share/article/zan/'+this.x_id,{params:{count:this.zancount}}).subscribe((data)=>{
+        console.log(data);
+      })
+      $('#like1').addClass("heartAnimation").attr("rel","unlike");
+      A.style.backgroundPosition="right";
+		}
+		else{
+      this.zancount--;
+      this.http.get('/api/share/article/zan/'+this.x_id,{params:{count:this.zancount}}).subscribe((data)=>{
+        console.log(data);
+      })
+			$('#like1').removeClass("heartAnimation").attr("rel","like");
+			$('#like1').css("background-position","left");
+		}
   }
   perComment(){
     var com=document.getElementsByClassName("com")[0] as HTMLElement;

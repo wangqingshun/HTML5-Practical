@@ -37,26 +37,6 @@
         </div>
         <div class="pcom">{{item.neirong}}</div>
       </li>
-      <!-- <li>
-        <div class="per">
-          <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
-          <div class="name">
-            <h5>
-              我爱厨房
-            </h5>
-          </div>
-        </div>
-        <div class="pcom">get到了</div>
-      </li>
-      <li>
-        <div class="per">
-          <div class="p"><img src="assets/imgs/timg.jpg" alt=""></div>
-          <div class="name">
-            <h5>我爱厨房</h5>
-          </div>
-        </div>
-        <div class="pcom">可以尝试一下</div>
-      </li> -->
     </ul>
     <textarea [(ngModel)]="EvaluateInfo.content"  value="content" name="content" placeholder="说点什么······"></textarea><span id="push" (click)="push()">发送</span>
   </div>
@@ -64,7 +44,7 @@
     <ion-item>
       <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
       <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">123</span>
-      <img src="assets/imgs/heart.png" alt="" (click)="changeGood(good)" id="good" #good><span class="num" #num>123</span>
+      <div class="heart"  (click)="changeGood(heart)" id="like1" rel="like"></div><div class="likeCount" id="likeCount2" #heart>{{zancount}}</div>
     </ion-item>
   </ion-list>
 </ion-footer>

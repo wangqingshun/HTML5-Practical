@@ -49,7 +49,6 @@ export class ArticlePage {
     })
   }
   count=0;
-  count1=123;
   changeImg(like:HTMLInputElement){
     this.count++;
     if(this.count%2==0){
@@ -59,21 +58,11 @@ export class ArticlePage {
     }
   }
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad ArticlePage');
   }
   goAuthor(){
     this.navCtrl.push(AuthorPage);
   }
   changeGood(heart:HTMLInputElement){
-    // this.count++;
-    // if(this.count%2==0){
-    //   good.src="../assets/imgs/like.png";
-    //   this.count1++;
-    //   document.getElementsByClassName("num")[0].innerHTML=this.count1.toString();
-    // }else{
-    //   good.src="../assets/imgs/heart.png";
-    //   this.count1--;
-    // }
     var A=document.getElementById('like1');
     A.style.backgroundPosition=" ";
     var D=$('#like1').attr("rel");
