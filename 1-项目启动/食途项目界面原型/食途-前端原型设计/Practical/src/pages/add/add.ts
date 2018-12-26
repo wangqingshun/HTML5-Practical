@@ -35,7 +35,7 @@ export class AddPage {
 
   takePhoto(){
     this.initImgSer();
-    //this.imgSer.startCamera();
+    this.imgSer.startCamera();
     // const options: CameraOptions = {
     //   quality: 100,
     //   sourceType: this.camera.PictureSourceType.CAMERA,
@@ -51,7 +51,7 @@ export class AddPage {
   }
   choosePicture(){
     this.initImgSer();
-    //this.imgSer.openImgPicker();
+    this.imgSer.openImgPicker();
   }
   
     
