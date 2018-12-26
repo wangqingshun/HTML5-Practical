@@ -94,18 +94,23 @@ h1, h2, h3, h4, h5, h6 {
 	border-top-color: #FFF;
 	border-bottom-color: #FFF;
 	opacity: 1;
-    filter: alpha(opacity=100);
+	filter: alpha(opacity=100);
 }
 
 /* Secondary Masthead */
 
 .secondary-masthead {
+	height: 13px;
 	margin: 20px 0 0 0;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	padding: 20px;
 	background: #F8F8F8;
+}
+.secondary-masthead ul{
+	float: right;
+	
 }
 
 .secondary-masthead .breadcrumb {
@@ -223,6 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	
 }
 .slate .table tbody tr:hover td,
 .slate .table tbody tr:hover th {
@@ -233,6 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 .slate .table td {
   border-top: none;
   border-bottom: 1px solid #EBEBEB;
+  
 }
 
 .slate .table td.date {
@@ -246,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 .slate .table th.value {
 	width: 100px;
 	text-align: right;
+	
 }
 
 .slate .table td.actions,
@@ -263,19 +271,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slate .table td span.meta {
-	font-size: 11px;
+	font-size: 13px;
 	color: #BBB;
 }
 
-.slate .form-inline {
+.form-inline {
 	margin-bottom: 0;
-	padding: 10px 0;
+	padding: 0 0;
+	margin-top: -6px;
 }
-.slate .form-inline input,
-.slate .form-inline select {
+.form-inline input,
+.form-inline select {
 	margin-right: 6px;
 }
-
+.form-inline{
+	margin-top: -6px;
+}
 /* Heading Icon Link */
 
 .iconlink {
