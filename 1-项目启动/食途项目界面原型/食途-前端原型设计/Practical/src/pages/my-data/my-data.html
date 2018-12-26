@@ -1,12 +1,17 @@
 <ion-header no-border>
     <ion-navbar color="tom">
         <ion-title>个人资料</ion-title>
-        <ion-icon ios="ios-checkmark" md="md-checkmark" (click)='put(Newname)'></ion-icon>
+        <!-- <ion-icon ios="ios-checkmark" md="md-checkmark" (click)='put(Newname)'></ion-icon> -->
+        <ion-buttons end (click)='put(Newname)'>
+            <button ion-button>
+                <ion-icon ios="ios-checkmark" md="md-checkmark" ></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-        <div id='image' (click)='go()'> 
+    <div id='image' (click)='go()'>
         <!-- <input type="file" id="upload" accept="image/*" style="display:none"/> -->
         <img src={{headsrc}} alt="">
         <p>点击上传头像</p>
