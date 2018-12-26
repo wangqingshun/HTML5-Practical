@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthorPage } from '../author/author';
 import { Http } from '@angular/http';
+import * as $ from 'jquery';
+import { style } from '@angular/core/src/animation/dsl';
 /**
  * Generated class for the ArticlePage page.
  *
@@ -24,6 +26,7 @@ export class ArticlePage {
   buzhou ;
   fuliao ;
   zhuliao ;
+  zancount;
   flage=true;
   pinglun;
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
@@ -38,6 +41,7 @@ export class ArticlePage {
       this.buzhou = obj.buzhou.split(";");
       this.fuliao = obj.fuliao;
       this.zhuliao = obj.zhuliao; 
+      this.zancount=obj.zan;
     });
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
@@ -60,16 +64,35 @@ export class ArticlePage {
   goAuthor(){
     this.navCtrl.push(AuthorPage);
   }
-  changeGood(good:HTMLInputElement,num:HTMLInputElement){
-    this.count++;
-    if(this.count%2==0){
-      good.src="../assets/imgs/like.png";
-      this.count1++;
-      document.getElementsByClassName("num")[0].innerHTML=this.count1.toString();
-    }else{
-      good.src="../assets/imgs/heart.png";
-      this.count1--;
-    }
+  changeGood(heart:HTMLInputElement){
+    // this.count++;
+    // if(this.count%2==0){
+    //   good.src="../assets/imgs/like.png";
+    //   this.count1++;
+    //   document.getElementsByClassName("num")[0].innerHTML=this.count1.toString();
+    // }else{
+    //   good.src="../assets/imgs/heart.png";
+    //   this.count1--;
+    // }
+    var A=document.getElementById('like1');
+    A.style.backgroundPosition=" ";
+    var D=$('#like1').attr("rel");
+    if(D === 'like') {
+      this.zancount++;
+      this.http.get('/api/share/article/zan/'+this.x_id,{params:{count:this.zancount}}).subscribe((data)=>{
+        console.log(data);
+      })
+      $('#like1').addClass("heartAnimation").attr("rel","unlike");
+      A.style.backgroundPosition="right";
+		}
+		else{
+      this.zancount--;
+      this.http.get('/api/share/article/zan/'+this.x_id,{params:{count:this.zancount}}).subscribe((data)=>{
+        console.log(data);
+      })
+			$('#like1').removeClass("heartAnimation").attr("rel","like");
+			$('#like1').css("background-position","left");
+		}
   }
   perComment(){
     var com=document.getElementsByClassName("com")[0] as HTMLElement;
