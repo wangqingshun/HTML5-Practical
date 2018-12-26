@@ -75,7 +75,7 @@ export class ArticlePage {
   ionViewDidLoad() {
   }
   goAuthor(){
-    this.navCtrl.push(AuthorPage);
+    this.navCtrl.push(AuthorPage,{id:this.id});
   }
   changeGood(heart:HTMLInputElement){
     var A=document.getElementById('like1');

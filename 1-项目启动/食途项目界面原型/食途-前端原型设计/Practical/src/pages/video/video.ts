@@ -83,7 +83,7 @@ export class VideoPage {
     // console.log('ionViewDidLoad VideoPage');
   }
   goAuthor(){
-    this.navCtrl.push(AuthorPage);
+    this.navCtrl.push(AuthorPage,{id:this.id});
   }
   share(){
     alert("转发该消息");

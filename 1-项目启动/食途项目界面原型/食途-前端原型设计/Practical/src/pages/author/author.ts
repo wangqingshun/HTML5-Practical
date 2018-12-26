@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Http } from '@angular/http';
 /**
  * Generated class for the AuthorPage page.
  *
@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AuthorPage {
   isActive=0;
+  id;
+  obj={};
   isClick(i){
     this.isActive=i;
   }
@@ -30,8 +32,12 @@ export class AuthorPage {
       input.value="已关注"
     } 
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
+    this.id=this.navParams.get('id');
+    this.http.get('/api/guanzhu/'+this.id).subscribe((data)=>{
+      console.log(data);
+      this.obj=JSON.parse(data['_body'])[0];
+    })
   }
 
   ionViewDidLoad() {
