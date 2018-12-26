@@ -28,6 +28,7 @@ export class VideoPage {
   pinglun;
   count=0;
   count1=123;
+  start;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
     this.id=navParams.get('id');
     this.x_id=navParams.get('x_id');
@@ -41,15 +42,29 @@ export class VideoPage {
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
       console.log(this.pinglun);
+    });
+    var id=window.localStorage.getItem('id');
+    this.http.get('/api/share/article/shoucang1/' + this.x_id, { params: { id:id } }).subscribe((data) => {
+      console.log(data);
+      var obj=JSON.parse(data['_body']);
+      if (obj.code==100) {
+        this.start = "../assets/imgs/star.png";
+      } else {
+        this.start = "../assets/imgs/xing.png";
+      }
     })
   }
   changeImg(like:HTMLInputElement){
-    this.count++;
-    if(this.count%2==0){
-      like.src="../assets/imgs/star.png";
-    }else{
-      like.src="../assets/imgs/xing.png";
-    }
+    var id=window.localStorage.getItem('id');
+    this.http.get('/api/share/article/shoucang/' + this.x_id, { params: { id:id } }).subscribe((data) => {
+      console.log(data);
+      var obj=JSON.parse(data['_body']);
+      if (obj.code==100) {
+        this.start = "../assets/imgs/xing.png";
+      } else {
+        this.start = "../assets/imgs/star.png";
+      }
+    })
   }
   changeGood(heart:HTMLInputElement){
     var A=document.getElementById('like1');
