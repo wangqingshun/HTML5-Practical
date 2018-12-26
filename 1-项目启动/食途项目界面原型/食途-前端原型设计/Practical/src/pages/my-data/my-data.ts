@@ -32,16 +32,11 @@ export class MyDataPage {
   headsrc;
   month=[1,2,3,4,5,6,7,8,9,10,11,12];
   year=[1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004];
-  countryside=["北京市","天津市","上海市","重庆市","河北省","山西省","辽宁省","吉林省","黑龙江省",
-  "江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","海南省",
-  "四川省","贵州省","云南省","陕西省","甘肃省","青海省","台湾省","内蒙古自治区","广西壮族自治区",
-  "西藏自治区","宁夏回族自治区","新疆维吾尔自治区","香港特别行政区","澳门特别行政区"];
   occupation=["学生","教师","医生","个体商人","其他"];
   gender=["女","男"];
   put(Newname:HTMLInputElement){
-    console.log(this.side);
     this.name=Newname.value==''? this.name:Newname.value;
-    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,dizhi:this.side,changju:this.sides,sex:this.sex}).subscribe((data)=>{
+    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,zhuzhi:this.side,sex:this.sex}).subscribe((data)=>{
       var obj=JSON.parse(data['_body']);
       if(obj.code==200){
         console.log("修改成功");
@@ -52,8 +47,8 @@ export class MyDataPage {
   }
   ionViewWillEnter(){
   }
-  constructor(public navCtrl: NavController, public http :Http,public navParams: NavParams,private reviceServe: ReviceServeProvider,
-     private notiSer: NoticeService,private imgSer: ImgService
+  constructor(public navCtrl: NavController, public http :Http,public navParams: NavParams,
+    private reviceServe: ReviceServeProvider,private notiSer: NoticeService,private imgSer: ImgService
     ) {
       this.name=this.navParams.get('name');
       this.headsrc=this.navParams.get('headsrc');
@@ -65,7 +60,6 @@ export class MyDataPage {
         this.some=obj.month;
         this.occ=obj.zhiye;
         this.side=obj.dizhi;
-        this.sides=obj.changju;
         this.sex=obj.sex;
       })
     }
