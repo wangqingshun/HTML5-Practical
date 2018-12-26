@@ -69,7 +69,7 @@ export class ImgService {
     } 
           
     // 启动拍照功能
-    private startCamera() {
+    public startCamera() {
         this.camera.getPicture(this.options).then((imageData) => {
         let base64Image = 'data:image/jpeg;base64,' + imageData;
         this.uploadImg(imageData);
@@ -79,7 +79,7 @@ export class ImgService {
     }
    
     // 打开手机相册
-    private openImgPicker() {
+    public openImgPicker() {
         let temp = '';
         this.imagePicker.getPictures(this.imagePickerOpt).then((results) => {
             for (var i = 0; i < results.length; i++) {
@@ -95,7 +95,7 @@ export class ImgService {
     }
    
     // 上传图片
-    private uploadImg(path: string) {
+    public uploadImg(path: string) {
         if(!path) {
             return;
         }
