@@ -65,6 +65,7 @@ export class VideoPage {
       this.flage=false;
     }else{
       com.style.display='none';
+      this.flage=true;
     }
   }
   ionViewDidLoad() {

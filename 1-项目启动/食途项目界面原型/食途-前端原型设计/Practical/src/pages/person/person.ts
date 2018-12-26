@@ -31,6 +31,7 @@ export class PersonPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     this.phone= window.localStorage.getItem('username');
     this.http.post('/api/person',{phone:this.phone}).subscribe((data)=>{
+      console.log(data);
       var obj=JSON.parse(data['_body'])[0];
       this.name=obj.name;
       this.headsrc=obj.head;
