@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthorPage } from '../author/author';
 import { Http} from '@angular/http';
+import * as $ from 'jquery';
+
 /**
  * Generated class for the VideoPage page.
  *
@@ -32,6 +34,7 @@ export class VideoPage {
     this.http.get('/api/share/video/'+this.x_id,{"params":{id:this.id,x_id:this.x_id}}).subscribe((data)=>{
       this.video=JSON.parse(data["_body"])[0][0];
       this.videosrc=this.video.src;
+      this.zancount=this.video.zan;
       this.touxiang=JSON.parse(data["_body"])[1][0].head;
       this.name=JSON.parse(data["_body"])[1][0].name;
     });
