@@ -10,7 +10,14 @@
             <p>新疆大盘鸡</p>
             <img src='../../assets/imgs/ms3.jpg'>
         </li>
-        <li class='article'>
+        <li *ngFor="let item of arr" class='article'>
+            <div class="artimg"><img src={{item.src}}></div>
+            <div class="artcon">
+                <h3>{{item.name}}</h3>
+                <p>{{item.jianjie}}</p>
+            </div>
+        </li>
+        <!-- <li class='article'>
             <div class="artimg"><img src='../../assets/imgs/ms4.jpg'></div>
             <div class="artcon">
                 <h3>宝宝版香蕉派</h3>
@@ -23,6 +30,6 @@
                 <h3>牛奶鸡蛋补丁</h3>
                 <p>牛奶鸡蛋布丁口感滑嫩，营养好，制作简单，零失败哦。</p>
             </div>
-        </li>
+        </li> -->
     </ul>
 </ion-content>
