@@ -26,7 +26,7 @@ export class MyDataPage {
   item;
   occ;
   side;
-  sides;
+  city;
   sex;
   name;
   headsrc;
@@ -36,7 +36,15 @@ export class MyDataPage {
   gender=["女","男"];
   put(Newname:HTMLInputElement){
     this.name=Newname.value==''? this.name:Newname.value;
-    this.http.post('/api/data',{phone:this.phone,name:this.name,year:this.item,month:this.some,zhiye:this.occ,zhuzhi:this.side,sex:this.sex}).subscribe((data)=>{
+    this.http.post('/api/data',{
+      phone:this.phone,
+      name:this.name,
+      year:this.item,
+      month:this.some,
+      zhiye:this.occ,
+      dizhi: this.cityFliter(this.side),
+      sex:this.sex
+    }).subscribe((data)=>{
       var obj=JSON.parse(data['_body']);
       if(obj.code==200){
         console.log("修改成功");
@@ -59,17 +67,14 @@ export class MyDataPage {
         this.item=obj.year;
         this.some=obj.month;
         this.occ=obj.zhiye;
-        this.side=obj.dizhi;
+        this.city=obj.dizhi;
         this.sex=obj.sex;
       })
-    }
-    ionViewDidLoad() {
       this.getRequestContact();
     }
     getRequestContact() { 
       this.reviceServe.getRequestContact().subscribe(res => { 
         this.listData = res.json(); 
-        console.log(this.listData);
       }, error => { 
         console.log(error); 
       }) 
@@ -89,4 +94,26 @@ go(){
     this.initImgSer();
     this.imgSer.showPicActionSheet();
   }
+  //将对应城市码转为文字
+  cityFliter(val) {
+    if (typeof this.side == 'undefined') {
+      return this.city;
+    } else {
+      this.city = '';
+      var province = val.substring(0, 6);
+      var shi = val.substring(7, 13);
+      var xian = val.substring(14);
+      this.city += this.listData[0].options.find(function (e) {
+        return e.value === province;
+      }).text;
+      this.city += this.listData[1].options.find(function (e) {
+        return e.value === shi;
+      }).text;
+      this.city += this.listData[2].options.find(function (e) {
+        return e.value === xian;
+      }).text;
+      return this.city;
+    }
+
+}
 }
