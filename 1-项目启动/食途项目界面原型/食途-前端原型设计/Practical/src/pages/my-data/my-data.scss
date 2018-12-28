@@ -6,11 +6,29 @@ page-my-data {
     #image {
         padding: 10%;
         text-align: center;
+        .upload{
+            width:80px;
+            height:80px;
+            background-color: black;
+            position: absolute;
+            left:40%;
+            opacity: 0;
+            height:80px;
+            form{
+                width:100%;
+                input{
+                    display: block;
+                    width:100%;
+                    height:80px;
+                }
+            }
+        }
     }
     img {
         border-radius: 50%;
         width: 80px;
         height: 80px;
+        
     }
     ion-icon {
         float: right;

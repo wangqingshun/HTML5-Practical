@@ -34,6 +34,32 @@ export class MyDataPage {
   year=[1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004];
   occupation=["学生","教师","医生","个体商人","其他"];
   gender=["女","男"];
+  fileSelected(){
+    var id=window.localStorage.getItem('id');
+    var iMaxFilesize = 2097152;
+    var imageFile = document.getElementById('imageFile') as HTMLFormElement;    //读取文件
+    var oFile =imageFile.files[0]
+    var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+    if (!rFilter.test(oFile.type)) {
+        alert("文件格式必须为图片");
+        return;
+    }
+    if (oFile.size > iMaxFilesize) {
+        alert("图片大小不能超过2M");
+        return;
+    }
+    var uploadFrom =document.getElementById('uploadForm') as HTMLFormElement;
+    var vFD = new FormData(uploadFrom);    //建立请求和数据
+    vFD.append("userfile", oFile);
+    var oXHR = new XMLHttpRequest();
+    oXHR.onreadystatechange=function(){
+      if(oXHR.readyState==4 && oXHR.status==200){
+        console.log(oXHR.response);
+      }
+    };  
+    oXHR.open('POST', 'http://39.96.21.142:3000/api/touxiang/'+id);
+    oXHR.send(vFD);
+  }
   put(Newname:HTMLInputElement){
     this.name=Newname.value==''? this.name:Newname.value;
     this.http.post('/api/data',{
