@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthorPage } from '../author/author';
 import { Http} from '@angular/http';
+import * as $ from 'jquery';
+
 /**
  * Generated class for the VideoPage page.
  *
@@ -26,27 +28,43 @@ export class VideoPage {
   pinglun;
   count=0;
   count1=123;
+  start;
   constructor(public http: Http,public navCtrl: NavController, public navParams: NavParams) {
     this.id=navParams.get('id');
     this.x_id=navParams.get('x_id');
     this.http.get('/api/share/video/'+this.x_id,{"params":{id:this.id,x_id:this.x_id}}).subscribe((data)=>{
       this.video=JSON.parse(data["_body"])[0][0];
       this.videosrc=this.video.src;
+      this.zancount=this.video.zan;
       this.touxiang=JSON.parse(data["_body"])[1][0].head;
       this.name=JSON.parse(data["_body"])[1][0].name;
     });
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
       console.log(this.pinglun);
+    });
+    var id=window.localStorage.getItem('id');
+    this.http.get('/api/share/article/shoucang1/' + this.x_id, { params: { id:id } }).subscribe((data) => {
+      console.log(data);
+      var obj=JSON.parse(data['_body']);
+      if (obj.code==100) {
+        this.start = "../assets/imgs/star.png";
+      } else {
+        this.start = "../assets/imgs/xing.png";
+      }
     })
   }
   changeImg(like:HTMLInputElement){
-    this.count++;
-    if(this.count%2==0){
-      like.src="../assets/imgs/star.png";
-    }else{
-      like.src="../assets/imgs/xing.png";
-    }
+    var id=window.localStorage.getItem('id');
+    this.http.get('/api/share/article/shoucang/' + this.x_id, { params: { id:id } }).subscribe((data) => {
+      console.log(data);
+      var obj=JSON.parse(data['_body']);
+      if (obj.code==100) {
+        this.start = "../assets/imgs/xing.png";
+      } else {
+        this.start = "../assets/imgs/star.png";
+      }
+    })
   }
   changeGood(heart:HTMLInputElement){
     var A=document.getElementById('like1');
@@ -90,8 +108,8 @@ export class VideoPage {
   }
   EvaluateInfo = {content: ''};
   push(){
-    console.log(this.EvaluateInfo.content);
-    this.http.post('/api/pinglun',{id:this.id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
+    var id=window.localStorage.getItem('id');
+    this.http.post('/api/pinglun',{id:id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
       console.log(data);
       this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
         this.pinglun=JSON.parse(data['_body']);

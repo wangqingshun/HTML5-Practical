@@ -113,7 +113,8 @@ export class ArticlePage {
   }
 EvaluateInfo = {content: ''};
 push(){
-  this.http.post('/api/pinglun',{id:this.id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
+  var id=window.localStorage.getItem('id');
+  this.http.post('/api/pinglun',{id:id,x_id:this.x_id,content:this.EvaluateInfo.content}).subscribe((data)=>{
     console.log(data);
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);

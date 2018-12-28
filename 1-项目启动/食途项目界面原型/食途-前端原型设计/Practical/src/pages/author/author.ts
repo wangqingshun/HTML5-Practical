@@ -34,7 +34,8 @@ export class AuthorPage {
   }
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     this.id=this.navParams.get('id');
-    this.http.get('/api/guanzhu/'+this.id).subscribe((data)=>{
+    var id=window.localStorage.getItem('id');
+    this.http.get('/api/guanzhu/'+this.id,{params:{id:id}}).subscribe((data)=>{
       console.log(data);
       this.obj=JSON.parse(data['_body'])[0];
     })

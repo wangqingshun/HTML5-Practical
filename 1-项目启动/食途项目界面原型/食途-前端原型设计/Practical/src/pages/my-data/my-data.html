@@ -1,7 +1,6 @@
 <ion-header no-border>
     <ion-navbar color="tom">
         <ion-title>个人资料</ion-title>
-        <!-- <ion-icon ios="ios-checkmark" md="md-checkmark" (click)='put(Newname)'></ion-icon> -->
         <ion-buttons end (click)='put(Newname)'>
             <button ion-button>
                 <ion-icon ios="ios-checkmark" md="md-checkmark" ></ion-icon>
@@ -37,13 +36,10 @@
             </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label>我的家乡</ion-label>
-            <ion-multi-picker [(ngModel)]="side" item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消" [(ngModel)]="side">{{side}}</ion-multi-picker>
+            <ion-label>住址</ion-label>
+            <ion-multi-picker [placeholder]='city' [(ngModel)]="side" item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消" [(ngModel)]="side"></ion-multi-picker>
         </ion-item>
-        <ion-item>
-            <ion-label>常居</ion-label>
-            <ion-multi-picker [(ngModel)]="sides" item-content [multiPickerColumns]="listData" doneText="确定" cancelText="取消" [(ngModel)]="sides">{{sides}}</ion-multi-picker>
-        </ion-item>
+
         <ion-item>
             <ion-label>性别</ion-label>
             <ion-select [(ngModel)]="sex" okText="确定" cancelText="取消">
