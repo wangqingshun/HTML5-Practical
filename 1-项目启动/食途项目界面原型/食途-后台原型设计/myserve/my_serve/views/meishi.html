@@ -66,7 +66,8 @@
 							<li><a href="tuijianmeishi.html">管理员管理</a></li>
 						</ul>
 					</li>
-					<li><a href="xitongtongzhi.html"><i class="icon-bullhorn"></i> 系统通知管理
+					<li><a href="xitongtongzhi.html"><i class="icon-bullhorn"></i> 系统通知管理 
+					
 					</a></li>
 					
 					<li class="dropdown">
@@ -75,6 +76,8 @@
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="collapse" data-target="#settings-dropdown" href="#"><i class="icon-cogs"></i> 设置</a>
 					</li>
+					
+					
 				</ul>
 			
 			</div> <!-- end main-left-col -->
@@ -85,29 +88,25 @@
 		
 	<div class="secondary-masthead">
 	
+		<form class="form-inline">
+			<input type="text" class="input-large" placeholder="搜索">
+			<button type="submit" class="btn btn-primary">搜索</button>
+		</form>
 
-	
-			<form class="form-inline">
-				<input type="text" class="input-large" placeholder="搜索">
-				<button type="submit" class="btn btn-primary">搜索</button>
-			</form>
-	
-			<ul class="nav nav-pills pull-right" style="margin-top: -32px;">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> 王清顺 <b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="profile.html">通知</a></li>
-						<li><a href="">注销</a></li>
-					</ul>
-				</li>
-			</ul>
-			
+		<ul class="nav nav-pills pull-right" style="margin-top: -32px;">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> 王清顺 <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="profile.html">通知</a></li>
+					<li><a href="">注销</a></li>
+				</ul>
+			</li>
+		</ul>
 		
 	</div>
 	
 	<div class="main-area dashboard">
-	
 			
 			<div class="row">
 				
@@ -116,27 +115,85 @@
 					<div class="slate">
 					
 						<div class="page-header">
-							<h2>文章修改</h2>
+							<h2>食材</h2>
 						</div>
 					
-						<form class="form-horizontal">
-						  <fieldset>								
-						  	<div class="control-group">
-						  		<label class="control-label" for="focusedInput">文章标题</label>
-					  			<div class="controls">
-										<input class="input-xlarge focused" id="focusedInput" type="text" value="文章标题">
-									</div>
-									
-						  	</div>
-						  					
-						  	<div class="control-group">
-										<label class="control-label" for="focusedInput">文章内容</label>
-										<div class="controls">
-											<input class="input-xlarge focused" id="focusedInput" type="text" value="文章内容">
-										</div>
-						  	</div>  		
-						  </fieldset>
-						</form>
+						<table class="orders-table table">
+						<thead>
+							<tr>
+								<th>食材</th>
+								<th>内容</th>
+								<th class="actions">操作&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+								<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+								<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+							    </td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="form.html" >食材</a><br /><span class="meta">简介</span></td>
+								<td>内容</td>
+								<td class="actions">
+									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
+									<a class="btn btn-small btn-primary" href="form.html">编辑</a>
+								</td>
+							</tr>
+							
+						</tbody>
+						</table>
 
 					</div>
 				
@@ -155,26 +212,27 @@
 						<a href="#" class="btn btn-danger">删除</a>
 					</div>
 				</div>
+			
+				<div class="span5">
 				
-				<div class="modal hide fade" id="tijiao">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">×</button>
-						<h3>提交</h3>
+					<div class="pagination pull-left">
+						<ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
 					</div>
-					<div class="modal-body">
-						<p>提交?</p>
-					</div>
-					<div class="modal-footer">
-						<a href="#" class="btn" data-dismiss="modal">关闭</a>
-						<a href="#" class="btn btn-danger">提交</a>
-					</div>
+				
 				</div>
-
-				<div class="span10 listing-buttons">
-
-					<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">删除</a>
-					<button class="btn btn-success"><a style="color:aliceblue" data-toggle="modal" href="#tijiao">提交</a></button>
 				
+				<div class="span5 listing-buttons pull-right">
+					<button class="btn btn-primary">添加</button>
+					<button class="btn btn-info">批量删除</button>
 				</div>
 				
 			</div>
