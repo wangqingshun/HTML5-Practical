@@ -37,6 +37,7 @@ export class MyDataPage {
   fileSelected(){
     var id=window.localStorage.getItem('id');
     var iMaxFilesize = 2097152;
+    var iMinFilesize = 10240;
     var imageFile = document.getElementById('imageFile') as HTMLFormElement;    //读取文件
     var oFile =imageFile.files[0]
     var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
@@ -44,8 +45,8 @@ export class MyDataPage {
         alert("文件格式必须为图片");
         return;
     }
-    if (oFile.size > iMaxFilesize) {
-        alert("图片大小不能超过2M");
+    if (oFile.size > iMaxFilesize || oFile.size<iMinFilesize) {
+        alert("图片大小不能超过2M,且要大于100k");
         return;
     }
     var uploadFrom =document.getElementById('uploadForm') as HTMLFormElement;
@@ -55,15 +56,13 @@ export class MyDataPage {
     oXHR.onreadystatechange=function(){
       if(oXHR.readyState==4 && oXHR.status==200){
         var obj=JSON.parse(oXHR.response);
-        this['src']=obj.head;
-        console.log(this);
-        return (obj.head);
+        window['src']=obj.head;
       }
-    };
-    setTimeout(function(){this.headsrc=oXHR['src'];console.log(this.headsrc)},2000)  
+    }
     oXHR.open('POST', 'http://39.96.21.142:3000/api/touxiang/'+id);
     oXHR.send(vFD);
   }
+ 
   put(Newname:HTMLInputElement){
     this.name=Newname.value==''? this.name:Newname.value;
     this.http.post('/api/data',{
