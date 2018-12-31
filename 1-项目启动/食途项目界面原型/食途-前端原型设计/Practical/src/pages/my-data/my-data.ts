@@ -54,9 +54,13 @@ export class MyDataPage {
     var oXHR = new XMLHttpRequest();
     oXHR.onreadystatechange=function(){
       if(oXHR.readyState==4 && oXHR.status==200){
-        console.log(oXHR.response);
+        var obj=JSON.parse(oXHR.response);
+        this['src']=obj.head;
+        console.log(this);
+        return (obj.head);
       }
-    };  
+    };
+    setTimeout(function(){this.headsrc=oXHR['src'];console.log(this.headsrc)},2000)  
     oXHR.open('POST', 'http://39.96.21.142:3000/api/touxiang/'+id);
     oXHR.send(vFD);
   }
