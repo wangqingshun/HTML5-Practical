@@ -13,22 +13,22 @@
 
 项目成员
 -------
-* 张成成（项目经理、前端工程师、数据库管理员）<br>
+* 张成成（项目经理、前端工程师）<br>
   * Email：1306073684@qq.com<br>  
   * Github：https://github.com/zhangchengcheng123<br>  
-* 闫博文（数据库管理员、前端工程师）<br>  
+* 闫博文（前端工程师，UI设计）<br>  
   * Email：942090534@qq.com<br>
   * Github：https://github.com/Yanbowen1999<br>
-* 朱泓宇（后端工程师）<br>
+* 朱泓宇（前端工程师，UI设计）<br>
   * Email：1315211512@qq.com<br>
   * Gitthub：https://github.com/zhuhongyu6<br>
-* 王清顺（前端工程师、测试）<br>
+* 王清顺（后端工程师、数据库管理员）<br>
   * Email：2184801857@qq.com<br>
   * Github：https://github.com/wangqingshun<br>
-* 陈自力（前端工程师、UI设计）<br>
+* 陈自力（数据库管理员、测试）<br>
   * Email：646582284@qq.com<br>
   * Github：https://github.com/chenzilli<br>
-* 郭佳昊（前端工程师、测试）<br>
+* 郭佳昊（后端工程师、数据库管理员）<br>
   * Email：1113234417@qq.com<br>
   * Github：https://github.com/Guojiahao7<br>
 

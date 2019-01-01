@@ -24,6 +24,7 @@ export class AboutPage {
        var obj=JSON.parse(data["_body"]);
        this.vido=obj[0];
        this.article=obj[1];
+       console.log(this.article);
       })
   }
   ionViewDidLoad() {
