@@ -5,23 +5,15 @@
 </ion-header>
 <ion-content>
     <ion-list>
-        <ion-item detail-push>
-            <a class="item item-avatar" href="#">
-                <img src="../../assets/imgs/timg.jpg">
+        <ion-item>
+            <a class="item item-avatar" href="#" *ngFor='let item of follow' (click)='follows(item.id)'>
+                <img src={{item.src}}>
                 <div class="it">
-                    <h2>我爱厨房</h2>
-                    <p>Back off, man. I'm a scientist.</p>
+                    <h2>{{item.h2}}</h2>
+                    <p>{{item.p}}</p>
                 </div>
             </a>
         </ion-item>
-        <ion-item detail-push>
-            <a class="item item-avatar" href="#">
-                <img src="http://www.runoob.com/try/demo_source/venkman.jpg">
-                <div class="it">
-                    <h2>Venkman</h2>
-                    <p>Back off, man. I'm a scientist.</p>
-                </div>
-            </a>
-        </ion-item>
+
     </ion-list>
 </ion-content>
