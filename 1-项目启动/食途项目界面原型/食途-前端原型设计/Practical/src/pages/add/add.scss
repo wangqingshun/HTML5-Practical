@@ -3,19 +3,39 @@ page-add {
         text-align: end;
     }
     textarea {
-        height: 30%;
+        
         width: 100%;
+        height: auto;
         border: none;
     }
     .img {
-        height: 20%;
-        width: 40%;
+        
+        width:100%;
+        height: auto;
     }
-    li {
-        width: 8%;
-        list-style: none;
-        float: left;
-        margin-left: 10%;
-        margin-top: 10%;
+    ul{
+        width:100%;
+        height:auto;
+        li {
+            width: 8%;
+            list-style: none;
+            float: left;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+    }
+    .upload{
+        width:8%;
+        height:30px;
+        background:red;
+        position: relative;
+        left:23%;
+        top:-33px;
+        opacity: 0;
+        #imageFile{
+            display:block;
+            width:100%;
+            height:100%;
+        }
     }
 }

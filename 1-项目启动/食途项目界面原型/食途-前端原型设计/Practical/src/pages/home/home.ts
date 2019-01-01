@@ -22,7 +22,6 @@ export class HomePage {
 
     this.http.get('/api/home').subscribe((data)=>{
       setTimeout(()=>{
-        console.log(data);
         var obj= JSON.parse(data["_body"]);
         console.log(data["_body"]);
         this.lunbo=obj[1];
