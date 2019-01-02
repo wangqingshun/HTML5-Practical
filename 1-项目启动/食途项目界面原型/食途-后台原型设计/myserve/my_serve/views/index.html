@@ -19,26 +19,14 @@
             <form action="" method="post">
                 <input type="text" name="username" class="username" placeholder="管理员用户名">
                 <input type="password" name="password" class="password" placeholder="密码">
-                <button type="submit" class="sub">登录</button>
+                <button type="submit"><a href="home.html" >登录</a></button>
                 <!-- <div class="error"><span>+</span></div> -->
             </form>
         </div>
         <script src="../public/stylesheets/js/jquery-1.8.2.min.js"></script>
         <script src="../public/stylesheets/js/supersized.3.2.7.min.js"></script>
         <script src="../public/stylesheets/js/supersized-init.js"></script>
-        <!-- <script src="../public/stylesheets/js/scripts.js"></script> -->
-        <script>
-            window.onload=function(){
-                var phone = document.getElementsByClassName('username')[0].value;
-                var psw = document.getElementsByClassName('password')[0].value;
-                var sub = document.getElementsByClassName('sub')[0];
-                sub.onclick=function(){
-                    console.log(phone,psw);
-                }
-            }
-            
-            
-        </script>
+        <script src="../public/stylesheets/js/scripts.js"></script>
     </body>
 </html>
 
