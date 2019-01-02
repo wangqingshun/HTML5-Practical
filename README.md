@@ -39,7 +39,7 @@
 ![注册](image/res.png)
 ![首页](image/home.png)
 ![分享](image/about.png)
-![文章](image/about1.png)
+![文章](image/about2.png)
 ![消息](image/tips.png)
 ![我的](image/my.png)
 ![个人](image/my-data.png)
