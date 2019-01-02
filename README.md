@@ -35,4 +35,4 @@
 运行效果
 -------
 
-![image/login.png]
+![注册](image/login.png)
