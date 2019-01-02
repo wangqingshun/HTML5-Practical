@@ -35,11 +35,11 @@
 运行效果
 -------
 
-![登录](image/login.png)
-![注册](image/res.png)
-![首页](image/home.png)
-![分享](image/about.png)
-![文章](image/about2.png)
-![消息](image/tips.png)
-![我的](image/my.png)
+![登录](image/login.png)<br> 
+![注册](image/res.png)<br> 
+![首页](image/home.png)<br> 
+![分享](image/about.png)<br> 
+![文章](image/about2.png)<br> 
+![消息](image/tips.png)<br> 
+![我的](image/my.png)<br> 
 ![个人](image/my-data.png)
