@@ -7,7 +7,7 @@
   </div>
   <ion-searchbar placeholder="搜索" (click)="goSearch()"></ion-searchbar>
   <ion-refresher (ionRefresh)="doRefresh($event)">
-      <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>
+      <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..." ></ion-refresher-content>
   </ion-refresher>
   <div [ngSwitch]="isActive">
     <div *ngSwitchCase="0">

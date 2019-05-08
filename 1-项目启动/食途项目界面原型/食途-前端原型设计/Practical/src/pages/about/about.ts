@@ -24,12 +24,23 @@ export class AboutPage {
        var obj=JSON.parse(data["_body"]);
        this.vido=obj[0];
        this.article=obj[1];
-       console.log(this.article);
       })
   }
   ionViewDidLoad() {
     
   }
+  doRefresh(refresher) {
+    setTimeout(() => {
+      this.http.get('/api/share').subscribe((data)=>{
+        var obj=JSON.parse(data["_body"]);
+        this.vido=obj[0];
+        this.article=obj[1];
+        console.log(this.vido,this.article);
+      })
+      refresher.complete();
+    }, 2000);
+  }
+
   goVideo(x_id,id){
     this.navCtrl.push(VideoPage,{x_id:x_id,id:id});
   }
