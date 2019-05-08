@@ -26,6 +26,6 @@
 </ion-grid>
 <p class='txt'>历史记录<ion-icon ios="ios-trash" md="md-trash" (click)="clear()"></ion-icon></p>
 <ul>
-    <li *ngFor="let item of arr">{{item}}</li>
+    <li *ngFor="let item of arr" (click)='searchHis()'>{{item}}</li>
 </ul>
 </ion-content>

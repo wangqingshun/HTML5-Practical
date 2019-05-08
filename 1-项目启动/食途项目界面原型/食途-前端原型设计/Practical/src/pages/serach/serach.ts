@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SearchPage } from '../search/search';
 
 /**
  * Generated class for the SerachPage page.
@@ -23,9 +24,14 @@ export class SerachPage {
     "麻辣豆腐","蒜蓉蒸扇贝","鱼香肉丝－川菜","川北凉粉","香酥鸭","鱼香排骨","陈麻婆豆腐","羊肉火锅",'蒜香鲶鱼',
     '姜葱基围虾',"四川凉面","粉蒸牛肉","野生菌汤","辣子脆肠","脆皮肠头","泡菜炒肉末","麻辣牛肉干","蒜蓉蒸扇贝","川味猪肝",]
   search(){
-    this.arr.push(this.txt);
-    localStorage.setItem("history",JSON.stringify(this.arr));
-    this.txt=""
+    if(this.txt==''){
+      this.txt='重庆鸡公煲';
+    }else{
+      this.arr.push(this.txt);
+      localStorage.setItem("history",JSON.stringify(this.arr));
+      this.txt=""
+    }
+    this.navCtrl.push(SearchPage);
   }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -44,5 +50,9 @@ export class SerachPage {
   clear(){
     window.localStorage.removeItem("history");
     this.arr=[];
+  }
+
+  searchHis(){
+    this.navCtrl.push(SearchPage);
   }
 }
