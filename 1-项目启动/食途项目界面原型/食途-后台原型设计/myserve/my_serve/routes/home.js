@@ -2,51 +2,8 @@ var express = require('express');
 var Usesql = require('../modules/usesql');
 var db = require('../modules/database');
 var router = express.Router();
-/* GET home page. */
-// db.getConnection(function(err,connection){
+
 arr=[];arr3=[];arr4=[];quanbu=[];zuijia=[];jiachang=[];zaocan=[];meishi=[];gaodian=[];
-// connection.query('SELECT * FROM tuijian1',(err,result)=>{
-//     	if(!err){
-//         	for(var i=0;i<result.length;i++){
-//             	arr3.push(result[i]);
-//             }
-//           for(var i=13;i<21;i++){
-//             	quanbu.push(result[i]);
-//             }
-//           for(var i=21;i<29;i++){
-//             	zuijia.push(result[i]);
-//             }
-//           for(var i=29;i<37;i++){
-//             	jiachang.push(result[i]);
-//             }
-//           for(var i=37;i<45;i++){
-//             	zaocan.push(result[i]);
-//             }
-//           for(var i=45;i<51;i++){
-//             	meishi.push(result[i]);
-//             }
-//           for(var i=51;i<58;i++){
-//             	gaodian.push(result[i]);
-//             }
-//         }
-//     })
-//   connection.query('SELECT * FROM tuijian2',(err,result)=>{
-//     	if(!err){
-//         	for(var i=0;i<result.length;i++){
-//             	arr4.push(result[i]);
-//             }
-//         }
-//     })
-//   connection.query('SELECT * FROM t1_xiangqing',(err,result)=>{
-//     	if(!err){
-//         	for(var i=0;i<result.length;i++){
-//               	result[i].buzhou=result[i].buzhou.split(";");
-//             	arr.push(result[i]);
-//             }
-//         }
-//     })
-// connection.release();
-// })
 var Home=(function(){
 function Home(id,src,p){
         this.id=id;
@@ -63,9 +20,9 @@ var lunbo1=[
 
 var Shicai=(function(){
 function Shicai(id,src,name,jianjie,gongxiao,yiji,zuofa){
-        this.id=id;
-        this.src=src;
-        this.name=name;
+      this.id=id;
+      this.src=src;
+      this.name=name;
   		this.jianjie=jianjie;
   		this.gongxiao=gongxiao;
   		this.yiji=yiji;

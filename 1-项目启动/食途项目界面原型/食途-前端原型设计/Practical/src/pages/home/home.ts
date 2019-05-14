@@ -23,7 +23,7 @@ export class HomePage {
     this.http.get('/api/home').subscribe((data)=>{
       setTimeout(()=>{
         var obj= JSON.parse(data["_body"]);
-        console.log(data["_body"]);
+        // console.log(data["_body"]);
         this.lunbo=obj[1];
         this.tuijian1=obj[0];
         this.tuijian2=obj[2];
@@ -49,6 +49,7 @@ export class HomePage {
   huan(x){
     this.http.get('/api/home/'+x).subscribe((data)=>{
       var obj=JSON.parse(data["_body"]);
+      // console.log(x);
       if(x==1)this.tuijian1=obj;
       else this.tuijian2=obj;
     })

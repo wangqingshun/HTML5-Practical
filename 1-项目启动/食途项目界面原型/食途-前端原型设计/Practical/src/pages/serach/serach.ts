@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
 import { SearchPage } from '../search/search';
 
 /**
@@ -15,6 +16,8 @@ import { SearchPage } from '../search/search';
   templateUrl: 'serach.html',
 })
 export class SerachPage {
+  [x: string]: any;
+  name;
   txt:string;
   arr:string[]=[];
   menu=["鱼香肉丝",'毛血旺',"辣炒鱿鱼丝","宫爆鸡丁","辣子鸡","泡凤爪","土豆烧排骨","辣子鸡丁","灯影牛肉","干煸牛肉丝","冬菜扣肉",
@@ -23,7 +26,7 @@ export class SerachPage {
     "姜汁热窝鸡蛋","辣椒炒大肠","干煸鳝鱼","小煎鸡","担担面","泡菜鱼","白油肝片","麻辣香水鱼","腊肉","回锅鱼片",
     "麻辣豆腐","蒜蓉蒸扇贝","鱼香肉丝－川菜","川北凉粉","香酥鸭","鱼香排骨","陈麻婆豆腐","羊肉火锅",'蒜香鲶鱼',
     '姜葱基围虾',"四川凉面","粉蒸牛肉","野生菌汤","辣子脆肠","脆皮肠头","泡菜炒肉末","麻辣牛肉干","蒜蓉蒸扇贝","川味猪肝",]
-  search(){
+  search(Newname:HTMLInputElement){
     if(this.txt==''){
       this.txt='重庆鸡公煲';
     }else{

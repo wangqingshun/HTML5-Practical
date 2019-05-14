@@ -24,6 +24,7 @@ export class RandomPage {
   '酸汤面','骨汤面','清汤面','西红柿鸡蛋汤面','家常汤面','茄汁汤面','鱼汤面',
   '鲜蔬骨汤面','鲜虾汤面','香菇鸡汤面','羊肉糊汤面','蛋丝青菜荞麦汤面','老鸭汤面',
   '浑汤面','菌菇汤面'];
+  img=['../assets/imgs/random.jpg'];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   change(){
@@ -31,7 +32,8 @@ export class RandomPage {
       this.item=this.arr[num];console.log(this.item)
   } 
   start(){
-    var timer = setInterval(this.change.call(this), 1000);
+    var timer = setInterval(this.change.call(this), 20000);
+    console.log(this)
     setTimeout(function (){clearTimeout(timer);},6000);
   }
   

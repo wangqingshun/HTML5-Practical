@@ -35,7 +35,8 @@ export class AboutPage {
         var obj=JSON.parse(data["_body"]);
         this.vido=obj[0];
         this.article=obj[1];
-        console.log(this.vido,this.article);
+        console.log(obj[0]);   
+        console.log(obj[0][0].x_id);
       })
       refresher.complete();
     }, 2000);
