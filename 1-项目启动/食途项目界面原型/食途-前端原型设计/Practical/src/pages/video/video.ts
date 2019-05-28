@@ -4,12 +4,6 @@ import { AuthorPage } from '../author/author';
 import { Http} from '@angular/http';
 import * as $ from 'jquery';
 
-/**
- * Generated class for the VideoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
