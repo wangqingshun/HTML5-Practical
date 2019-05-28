@@ -9,15 +9,10 @@ import { FansPage } from '../fans/fans';
 import { CollectionPage } from '../collection/collection';
 import { LookPage } from '../look/look';
 import { LikePage } from '../like/like';
-//import { EditionPage } from '../edition/edition';
+import { EditionPage } from '../edition/edition';
 import { AboutUsPage } from '../about-us/about-us';
 
-/**
- * Generated class for the PersonPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
