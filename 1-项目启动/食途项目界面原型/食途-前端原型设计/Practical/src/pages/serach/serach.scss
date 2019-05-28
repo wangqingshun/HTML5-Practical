@@ -1,0 +1,51 @@
+page-serach {
+    input{
+        width:230px;
+        height: 40px;
+        margin-left:15px;
+        display:inline-block;
+        border-radius:10px!important;
+    }
+    .bar-button{
+        top:-10px!important;
+    }
+    span{
+        display:block;
+        float:right;
+        margin-top:10px;
+        font-size:18px;
+    }
+    ion-content{
+        padding:0;
+    }
+    ion-grid{
+        padding:0;
+        ion-col{
+            border-radius:5px;
+            margin-top:5px !important;
+            margin-right:10px!important;
+            display:inline-block;
+            background-color:#f4f4f4;
+            text-align:center;
+        }
+    }
+    .txt{
+        color:gray;
+        padding-left:5px;
+        ion-icon{
+            float:right;
+            padding-right:15px;
+        }
+    }
+    li{
+        list-style: none;
+        float: left;
+        height: 40px;
+        border-radius:5px;
+        margin-top:10px !important;
+        margin-left:10px!important;
+        background-color:#f4f4f4;
+        text-align:center;
+        line-height: 40px;
+    }
+}

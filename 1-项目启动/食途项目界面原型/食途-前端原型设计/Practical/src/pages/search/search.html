@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ul class="article">
+      <li *ngFor="let item of article" (click)="goArticle(item.x_id,item.id)">
+        <div class="artimg"><img src={{item.src}} alt=""></div>
+        <div class="artcon">
+          <h5>{{item.name}}</h5>
+          <p>{{item.jianjie}}</p>
+        </div>
+      </li>
+    </ul>
+</ion-content>

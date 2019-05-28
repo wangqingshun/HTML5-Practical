@@ -1,0 +1,41 @@
+page-search {
+    .article {
+        margin: 0px!important;
+        padding: 0px!important;
+        li {
+            height: 150px;
+            width: 98%;
+            margin-left: 1%;
+            margin-top: 10px;
+            border: 1px solid gainsboro;
+        }
+        div {
+            float: left;
+        }
+        .artimg {
+            width: 40%;
+            height: 140px;
+            img {
+                height: 105%;
+            }
+        }
+        .artcon {
+            width: 58%;
+            margin-left: 2%;
+            h5 {
+                font-family: "宋体";
+                font-weight: bold;
+                height: 15px;
+                line-height: 10px;
+                margin-top: 7px;
+            }
+            p {
+                margin-left: -5%px;
+                font-size: 15px;
+                margin-top: 7px;
+                letter-spacing: 2px;
+                overflow: hidden;
+            }
+        }
+    }
+}
