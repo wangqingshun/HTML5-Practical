@@ -7,7 +7,7 @@ router.post('/',function(req,res){
 	db.getConnection(function(err,connection){
       console.log(req.body);
       	var name=req.body['name'];
-      	connection.query('SELECT name from z_xiangqing WHERE name=?',[name],function(err,result){
+      	connection.query('SELECT name from z_xiangqing WHERE name=?',[name],function(err,res){
         	if(!err){
             	var data={code:200,msg:"查询成功"};
               res.json(data);
