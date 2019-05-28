@@ -1,21 +1,3 @@
-/* ===================================================
- * bootstrap-transition.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#transitions
- * ===================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
 
 
 !function ($) {
@@ -24,9 +6,6 @@
 
     "use strict"; // jshint ;_;
 
-
-    /* CSS TRANSITION SUPPORT (http://www.modernizr.com/)
-     * ======================================================= */
 
     $.support.transition = (function () {
 
@@ -59,24 +38,6 @@
   })
 
 }(window.jQuery);
-/* =========================================================
- * bootstrap-modal.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#modals
- * =========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================= */
 
 
 !function ($) {
@@ -84,8 +45,6 @@
   "use strict"; // jshint ;_;
 
 
- /* MODAL CLASS DEFINITION
-  * ====================== */
 
   var Modal = function (content, options) {
     this.options = options
@@ -164,8 +123,6 @@
   }
 
 
- /* MODAL PRIVATE METHODS
-  * ===================== */
 
   function hideWithTransition() {
     var that = this
@@ -239,9 +196,7 @@
   }
 
 
- /* MODAL PLUGIN DEFINITION
-  * ======================= */
-
+ 
   $.fn.modal = function (option) {
     return this.each(function () {
       var $this = $(this)
@@ -277,33 +232,12 @@
   })
 
 }(window.jQuery);
-/* ============================================================
- * bootstrap-dropdown.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#dropdowns
- * ============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
 
 
 !function ($) {
 
   "use strict"; // jshint ;_;
 
-
- /* DROPDOWN CLASS DEFINITION
-  * ========================= */
 
   var toggle = '[data-toggle="dropdown"]'
     , Dropdown = function (element) {
@@ -351,8 +285,7 @@
   }
 
 
-  /* DROPDOWN PLUGIN DEFINITION
-   * ========================== */
+
 
   $.fn.dropdown = function (option) {
     return this.each(function () {
@@ -377,24 +310,7 @@
   })
 
 }(window.jQuery);
-/* =============================================================
- * bootstrap-scrollspy.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#scrollspy
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================== */
+
 
 
 !function ($) {
@@ -497,8 +413,6 @@
   }
 
 
- /* SCROLLSPY PLUGIN DEFINITION
-  * =========================== */
 
   $.fn.scrollspy = function ( option ) {
     return this.each(function () {
@@ -517,8 +431,7 @@
   }
 
 
- /* SCROLLSPY DATA-API
-  * ================== */
+
 
   $(function () {
     $('[data-spy="scroll"]').each(function () {
@@ -528,24 +441,7 @@
   })
 
 }(window.jQuery);
-/* ========================================================
- * bootstrap-tab.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#tabs
- * ========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================== */
+
 
 
 !function ($) {
@@ -553,8 +449,6 @@
   "use strict"; // jshint ;_;
 
 
- /* TAB CLASS DEFINITION
-  * ==================== */
 
   var Tab = function ( element ) {
     this.element = $(element)
@@ -637,8 +531,6 @@
   }
 
 
- /* TAB PLUGIN DEFINITION
-  * ===================== */
 
   $.fn.tab = function ( option ) {
     return this.each(function () {
@@ -663,25 +555,7 @@
   })
 
 }(window.jQuery);
-/* ===========================================================
- * bootstrap-tooltip.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#tooltips
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ===========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+
 
 
 !function ($) {
@@ -689,8 +563,6 @@
   "use strict"; // jshint ;_;
 
 
- /* TOOLTIP PUBLIC CLASS DEFINITION
-  * =============================== */
 
   var Tooltip = function (element, options) {
     this.init('tooltip', element, options)
@@ -912,8 +784,6 @@
   }
 
 
- /* TOOLTIP PLUGIN DEFINITION
-  * ========================= */
 
   $.fn.tooltip = function ( option ) {
     return this.each(function () {
@@ -939,24 +809,6 @@
 
 }(window.jQuery);
 
-/* ===========================================================
- * bootstrap-popover.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#popovers
- * ===========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * =========================================================== */
 
 
 !function ($) {
@@ -964,16 +816,12 @@
   "use strict"; // jshint ;_;
 
 
- /* POPOVER PUBLIC CLASS DEFINITION
-  * =============================== */
 
   var Popover = function ( element, options ) {
     this.init('popover', element, options)
   }
 
 
-  /* NOTE: POPOVER EXTENDS BOOTSTRAP-TOOLTIP.js
-     ========================================== */
 
   Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype, {
 
@@ -1037,33 +885,13 @@
   })
 
 }(window.jQuery);
-/* ==========================================================
- * bootstrap-alert.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#alerts
- * ==========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+
 
 
 !function ($) {
 
   "use strict"; // jshint ;_;
 
-
- /* ALERT CLASS DEFINITION
-  * ====================== */
 
   var dismiss = '[data-dismiss="alert"]'
     , Alert = function (el) {
@@ -1104,9 +932,6 @@
   }
 
 
- /* ALERT PLUGIN DEFINITION
-  * ======================= */
-
   $.fn.alert = function (option) {
     return this.each(function () {
       var $this = $(this)
@@ -1127,33 +952,13 @@
   })
 
 }(window.jQuery);
-/* ============================================================
- * bootstrap-button.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#buttons
- * ============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
+
 
 
 !function ($) {
 
   "use strict"; // jshint ;_;
 
-
- /* BUTTON PUBLIC CLASS DEFINITION
-  * ============================== */
 
   var Button = function (element, options) {
     this.$element = $(element)
@@ -1211,8 +1016,6 @@
   $.fn.button.Constructor = Button
 
 
- /* BUTTON DATA-API
-  * =============== */
 
   $(function () {
     $('body').on('click.button.data-api', '[data-toggle^=button]', function ( e ) {
@@ -1223,24 +1026,7 @@
   })
 
 }(window.jQuery);
-/* =============================================================
- * bootstrap-collapse.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#collapse
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
+
 
 
 !function ($) {
@@ -1248,8 +1034,6 @@
   "use strict"; // jshint ;_;
 
 
- /* COLLAPSE PUBLIC CLASS DEFINITION
-  * ================================ */
 
   var Collapse = function (element, options) {
     this.$element = $(element)
@@ -1345,8 +1129,6 @@
   }
 
 
- /* COLLAPSIBLE PLUGIN DEFINITION
-  * ============================== */
 
   $.fn.collapse = function (option) {
     return this.each(function () {
@@ -1365,8 +1147,6 @@
   $.fn.collapse.Constructor = Collapse
 
 
- /* COLLAPSIBLE DATA-API
-  * ==================== */
 
   $(function () {
     $('body').on('click.collapse.data-api', '[data-toggle=collapse]', function ( e ) {
@@ -1380,33 +1160,12 @@
   })
 
 }(window.jQuery);
-/* ==========================================================
- * bootstrap-carousel.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#carousel
- * ==========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+
 
 
 !function ($) {
 
   "use strict"; // jshint ;_;
-
-
- /* CAROUSEL CLASS DEFINITION
-  * ========================= */
 
   var Carousel = function (element, options) {
     this.$element = $(element)
@@ -1512,8 +1271,6 @@
   }
 
 
- /* CAROUSEL PLUGIN DEFINITION
-  * ========================== */
 
   $.fn.carousel = function (option) {
     return this.each(function () {
@@ -1535,8 +1292,7 @@
   $.fn.carousel.Constructor = Carousel
 
 
- /* CAROUSEL DATA-API
-  * ================= */
+
 
   $(function () {
     $('body').on('click.carousel.data-api', '[data-slide]', function ( e ) {
@@ -1549,24 +1305,7 @@
   })
 
 }(window.jQuery);
-/* =============================================================
- * bootstrap-typeahead.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#typeahead
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
+
 
 
 !function($){
@@ -1574,8 +1313,6 @@
   "use strict"; // jshint ;_;
 
 
- /* TYPEAHEAD PUBLIC CLASS DEFINITION
-  * ================================= */
 
   var Typeahead = function (element, options) {
     this.$element = $(element)
@@ -1797,9 +1534,6 @@
 
   }
 
-
-  /* TYPEAHEAD PLUGIN DEFINITION
-   * =========================== */
 
   $.fn.typeahead = function (option) {
     return this.each(function () {
