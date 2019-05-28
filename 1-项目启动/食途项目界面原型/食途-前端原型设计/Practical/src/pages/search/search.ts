@@ -22,18 +22,23 @@ export class SearchPage {
   vido;
   article;
   name;
+  history;
   constructor(public navCtrl: NavController,public http:Http) {
     this.http.get('/api/share').subscribe((data)=>{
        var obj=JSON.parse(data["_body"]);
        this.vido=obj[0];
        this.article=obj[1];
       })
-      this.name=JSON.parse(localStorage.getItem('history'));
-      console.log(this.name)
+      
+      this.history=JSON.parse(localStorage.getItem('history'));
+      this.name=this.history.pop()
+       console.log(this.name);
+
       this.http.post('/api/data',{
         name:this.name
       }).subscribe((data)=>{
         var obj=JSON.parse(data['_body']);
+        // console.log(obj)
         if(obj.code==200){
           console.log("查询成功");
         }else{
