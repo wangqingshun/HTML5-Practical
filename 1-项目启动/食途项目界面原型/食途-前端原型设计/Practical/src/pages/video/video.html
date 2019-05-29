@@ -38,12 +38,14 @@
         <div class="pcom">{{item.neirong}}</div>
       </li>
     </ul>
-    <textarea [(ngModel)]="EvaluateInfo.content"  value="content" name="content" placeholder="说点什么······"></textarea><span id="push" (click)="push()">发送</span>
+    <textarea [(ngModel)]="EvaluateInfo.content"  value="content" name="content" placeholder="说点什么······"></textarea>
+    <button id="push" (click)="push()">发送</button>
   </div>
   <ion-list>
     <ion-item>
-      <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">123</span>
-      <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">123</span>
+      <img src="assets/imgs/zf.png" alt="" (click)="share()"><span class="num">&nbsp;&nbsp;</span>
+      &nbsp;
+      <img src="assets/imgs/pl1.png" alt="" (click)="perComment()"><span class="num" (click)="perComment()">&nbsp;{{length}}</span>
       <div class="heart"  (click)="changeGood(heart)" id="like1" rel="like"></div><div class="likeCount" id="likeCount2" #heart>{{zancount}}</div>
     </ion-item>
   </ion-list>
