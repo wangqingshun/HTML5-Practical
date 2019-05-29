@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SearchPage} from '../search/search'
+import { SearchPage} from '../search/search';
+import { Http } from '@angular/http';
+import * as $ from 'jquery';
 
 /**
  * Generated class for the SerachPage page.
@@ -34,8 +36,26 @@ export class SerachPage {
     localStorage.setItem("history",JSON.stringify(this.arr));
     this.txt=""
     }
+    var $text = $('.search'),text=$text.val();
+    var neirong=text;
+    var obj={neirong:neirong};
+    var obj1=JSON.stringify(obj);
+    var oMyForm = new FormData();
+    oMyForm.append("obj",obj1);
+    var oReq = new XMLHttpRequest();
+    oReq.onreadystatechange=function(){
+      if(oReq.readyState==4 && oReq.status==200){
+        var obj=JSON.parse(oReq.response);
+        if(obj.code==200){
+          Alert("没有相应内容");
+          $text.val('');
+        }
+      }
+    }
+    oReq.open('POST', 'http://39.96.21.142:3000/api/search/'+neirong);
+    oReq.send(oMyForm);
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   }
 
   ionViewDidLoad() {
