@@ -115,7 +115,6 @@ push(){
     console.log(data);
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
-      //console.log(this.pinglun);
       this.length=JSON.parse(data['_body']).length;
     })
   })

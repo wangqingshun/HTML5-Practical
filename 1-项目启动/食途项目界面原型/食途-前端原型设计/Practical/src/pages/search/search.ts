@@ -6,12 +6,7 @@ import { AddPage } from '../add/add';
 import { Http } from '@angular/http';
 import { SerachPage } from '../serach/serach';
 
-/**
- * Generated class for the SearchPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({

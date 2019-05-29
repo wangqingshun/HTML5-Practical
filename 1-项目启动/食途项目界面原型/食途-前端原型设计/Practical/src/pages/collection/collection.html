@@ -5,31 +5,21 @@
 
 </ion-header>
 <ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..." ></ion-refresher-content>
+    </ion-refresher>
     <ul>
         <li class='video'>
             <p>新疆大盘鸡</p>
             <img src='../../assets/imgs/ms3.jpg'>
         </li>
-        <li *ngFor="let item of arr" class='article'>
+        <li *ngFor="let item of arr" class='article' (click)="goVideo(item.x_id,item.id)">
             <div class="artimg"><img src={{item.src}}></div>
             <div class="artcon">
                 <h3>{{item.name}}</h3>
                 <p>{{item.jianjie}}</p>
             </div>
         </li>
-        <!-- <li class='article'>
-            <div class="artimg"><img src='../../assets/imgs/ms4.jpg'></div>
-            <div class="artcon">
-                <h3>宝宝版香蕉派</h3>
-                <p>适合宝宝食用的，主料有香蕉和蛋挞皮，制作简单。</p>
-            </div>
-        </li>
-        <li class='article'>
-            <div class="artimg"><img src='../../assets/imgs/ms5.jpg'></div>
-            <div class="artcon">
-                <h3>牛奶鸡蛋补丁</h3>
-                <p>牛奶鸡蛋布丁口感滑嫩，营养好，制作简单，零失败哦。</p>
-            </div>
-        </li> -->
+        
     </ul>
 </ion-content>

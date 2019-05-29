@@ -1,12 +1,7 @@
 import { Component, } from '@angular/core';
 import { IonicPage, NavController, NavParams, } from 'ionic-angular';
-import { Http } from '@angular/http'; 
-/**
- * Generated class for the CollectionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Http } from '@angular/http'; import { VideoPage } from '../video/video';
+
 
 @IonicPage()
 @Component({
@@ -25,9 +20,19 @@ export class CollectionPage {
        })
   }
   
+  doRefresh(refresher) {
+    setTimeout(() => {
+      this.http.get('/api/share').subscribe((data)=>{
+        var arr=JSON.parse(data["_body"]);
+      })
+      refresher.complete();
+    }, 1000);
+  }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad CollectionPage');
   }
-
+  goVideo(x_id,id){
+    this.navCtrl.push(VideoPage,{x_id:x_id,id:id});
+  }
 }

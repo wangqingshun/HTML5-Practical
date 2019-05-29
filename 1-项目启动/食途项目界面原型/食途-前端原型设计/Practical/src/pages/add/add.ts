@@ -6,12 +6,7 @@ import { ImgService } from '../../services/ImgService.service';
 import { NoticeService } from '../../services/NoticeService.service'
 import { ReviceServeProvider } from '../../providers/revice-serve/revice-serve';
 import * as $ from 'jquery';
-/**
- * Generated class for the AddPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -57,6 +52,7 @@ export class AddPage {
     var obj={id:id,neirong:neirong};
     var obj1=JSON.stringify(obj);
     var oMyForm = new FormData();
+    console.log(obj1);
     oMyForm.append("userfile", imagefile.files[0]);
     oMyForm.append("obj",obj1);
     var oReq = new XMLHttpRequest();

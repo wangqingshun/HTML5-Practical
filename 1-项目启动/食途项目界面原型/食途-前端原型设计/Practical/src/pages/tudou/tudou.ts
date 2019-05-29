@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 
-/**
- * Generated class for the TudouPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -30,6 +25,7 @@ export class TudouPage {
     var id=this.navParams.get('id');
     this.http.get('/api/home/tuijian/'+id).subscribe((data)=>{
       var obj=JSON.parse(data['_body']);
+      console.log(JSON.parse(data['_body']));
       this.imgsrc=obj['src'];
       this.name=obj['name'];
       this.dapei=obj['dapei'];
