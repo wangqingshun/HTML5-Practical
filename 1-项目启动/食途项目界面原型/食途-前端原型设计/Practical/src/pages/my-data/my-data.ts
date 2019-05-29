@@ -5,6 +5,7 @@ import { ImgService } from '../../services/ImgService.service';
 import { NoticeService } from '../../services/NoticeService.service'
 import { Http } from '@angular/http';
 import { ReviceServeProvider } from '../../providers/revice-serve/revice-serve';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 /**
  * Generated class for the MyDataPage page.
  *
@@ -77,8 +78,10 @@ export class MyDataPage {
       var obj=JSON.parse(data['_body']);
       if(obj.code==200){
         console.log("修改成功");
+        alert("修改成功");
       }else{
         console.log("操作错误");
+        alert("操作错误");
       }
     })
   }

@@ -4,12 +4,7 @@ import { AuthorPage } from '../author/author';
 import { Http } from '@angular/http';
 import * as $ from 'jquery';
 import { style } from '@angular/core/src/animation/dsl';
-/**
- * Generated class for the ArticlePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -30,6 +25,7 @@ export class ArticlePage {
   flage=true;
   pinglun;
   start;
+  length;
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     this.id=this.navParams.get('id');
     this.x_id=this.navParams.get('x_id');
@@ -47,6 +43,7 @@ export class ArticlePage {
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
       console.log(this.pinglun);
+      this.length=JSON.parse(data['_body']).length;
     });
     var id=window.localStorage.getItem('id');
     this.http.get('/api/share/article/shoucang1/' + this.x_id, { params: { id:id } }).subscribe((data) => {
@@ -119,6 +116,7 @@ push(){
     this.http.get('/api/pinglun/'+this.x_id).subscribe((data)=>{
       this.pinglun=JSON.parse(data['_body']);
       //console.log(this.pinglun);
+      this.length=JSON.parse(data['_body']).length;
     })
   })
   this.EvaluateInfo.content='';
