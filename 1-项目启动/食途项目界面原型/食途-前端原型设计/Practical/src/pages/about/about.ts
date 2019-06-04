@@ -18,7 +18,7 @@ export class AboutPage {
   isClick(i){
     this.isActive=i;
   }
-  arr=["视频","文章","关注"];
+  arr=["视频","文章"];
   constructor(public navCtrl: NavController,public http:Http) {
     this.http.get('/api/share').subscribe((data)=>{
        var obj=JSON.parse(data["_body"]);
