@@ -9,10 +9,7 @@
             <ion-refresher-content refreshingSpinner="circles" refreshingText="正在刷新..." ></ion-refresher-content>
     </ion-refresher>
     <ul>
-        <li class='video'>
-            <p>新疆大盘鸡</p>
-            <img src='../../assets/imgs/ms3.jpg'>
-        </li>
+        
         <li *ngFor="let item of arr" class='article' (click)="goVideo(item.x_id,item.id)">
             <div class="artimg"><img src={{item.src}}></div>
             <div class="artcon">
