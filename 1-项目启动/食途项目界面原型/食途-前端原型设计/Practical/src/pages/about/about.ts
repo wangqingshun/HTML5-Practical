@@ -41,7 +41,6 @@ export class AboutPage {
       refresher.complete();
     }, 2000);
   }
-
   goVideo(x_id,id){
     this.navCtrl.push(VideoPage,{x_id:x_id,id:id});
   }

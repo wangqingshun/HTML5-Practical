@@ -28,8 +28,23 @@ page-about {
             list-style: none;
             float: left;
             border: 1px solid gainsboro;
+            position: relative;
+            p{
+                position: absolute;
+                top: 60%;
+                color: white;
+                font-size: 20px;
+            }
+        }
+        li p{
+            display: none;
+           
+        }
+        li:hover p{
+            display:block; 
         }
     }
+   
     .article {
         margin: 0px!important;
         padding: 0px!important;
