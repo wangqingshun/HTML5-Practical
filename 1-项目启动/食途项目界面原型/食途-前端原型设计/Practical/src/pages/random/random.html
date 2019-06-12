@@ -5,9 +5,12 @@
 </ion-header>
 
 <ion-content>
-  <img src="{{imgSrc}}" alt="">
+  <img src="{{img}}" alt="" id="make">
   <div class='result'>
-    <p>结果看这里:  {{item}}</p>
+    <p>{{item}}</p>
   </div>
-  <button (click)="start()">开始</button>
+  <div class="bottom">
+    <button (click)="start()">开始</button>
+    <span class="img"><img src="assets/imgs/r.png"/></span>
+  </div>
 </ion-content>
