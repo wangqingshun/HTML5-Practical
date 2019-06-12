@@ -7,14 +7,14 @@
 <ion-content>
     <img src={{imgsrc}} class='sp1'>
     <div>
-      <h4>{{name}}</h4>
-    <h4>制作材料：</h4>
+      <h3>{{name}}</h3>
+      <h4>制作材料：<span><img src="assets/imgs/cailiao.png"/></span></h4>
     <div>
-        <p>主料：{{zhuliao}}</p>
-        <p>辅料：{{fuliao}}</p>
-        <p>配料：{{peiliao}}</p>
+        <ion-item>主料：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{zhuliao}}</ion-item>
+        <ion-item>辅料：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{fuliao}}</ion-item>
+        <ion-item>配料：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{peiliao}}</ion-item>     
     </div>
-    <h4>制作步骤：</h4>
+    <h4>制作步骤：<span><img src="assets/imgs/buzhou.png"/></span></h4>
     <div>
         <p *ngFor="let item of buzhou">
             {{item}}
