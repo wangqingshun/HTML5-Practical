@@ -37,7 +37,7 @@ export class RandomPage {
   ['鱼汤面',['../assets/imgs/dcf.jpg']],['鲜蔬骨汤面',['../assets/imgs/dcf.jpg']],
   ['鲜虾汤面',['../assets/imgs/dcf.jpg']],['香菇鸡汤面',['../assets/imgs/dcf.jpg']],
   ['羊肉糊汤面',['../assets/imgs/dcf.jpg']],['蛋丝青菜荞麦汤面',['../assets/imgs/dcf.jpg']],
-  ['老鸭汤面',['../assets/imgs/dcf.jpg']],['浑汤面',['../assets/imgs/dcf.jpg']],['菌菇汤面'],['../assets/imgs/dcf.jpg']];
+  ['老鸭汤面',['../assets/imgs/dcf.jpg']],['浑汤面',['../assets/imgs/dcf.jpg']],['菌菇汤面',['../assets/imgs/dcf.jpg']]];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   change(){
@@ -46,7 +46,7 @@ export class RandomPage {
       this.img=this.arr[num][1];
   } 
   start(){
-    var timer = setInterval(this.change.call(this), 50000);
+    var timer = setInterval(this.change.call(this), 10000);
     console.log(this)
     setTimeout(function (){clearTimeout(timer);},6000);
   }
