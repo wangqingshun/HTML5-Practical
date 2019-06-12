@@ -25,7 +25,12 @@
   </ion-row>
 </ion-grid>
 <p class='txt'>历史记录<ion-icon ios="ios-trash" md="md-trash" (click)="clear()"></ion-icon></p>
-<ul>
-    <li *ngFor="let item of arr" (click)="goSearch()">{{item}}</li>
-</ul>
+<ul id="list">
+        <!-- <ion-row reorder="true">
+            <ion-col col-4 *ngFor="let item1 of fruitList"> -->
+        <p>{{item1}}</p>
+        <img src="{{img}}" alt="" id="">
+        <!-- </ion-col>
+        </ion-row> -->
+    </ul>
 </ion-content>
