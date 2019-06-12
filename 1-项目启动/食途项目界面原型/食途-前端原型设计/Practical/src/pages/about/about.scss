@@ -29,19 +29,16 @@ page-about {
             float: left;
             border: 1px solid gainsboro;
             position: relative;
+            opacity: 0.9;
             p{
+                opacity: 0.6;
                 position: absolute;
-                top: 60%;
-                color: white;
-                font-size: 20px;
+                top: 75%;
+                // color: white;
+                font-size: 18px;
+                // font-weight: bolder;
+                background-color: gainsboro;
             }
-        }
-        li p{
-            display: none;
-           
-        }
-        li:hover p{
-            display:block; 
         }
     }
    

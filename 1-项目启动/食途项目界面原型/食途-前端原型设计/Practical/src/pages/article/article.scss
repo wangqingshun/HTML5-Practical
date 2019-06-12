@@ -79,28 +79,29 @@ page-article {
     textarea{
         width: 90%;
         position: fixed;
-        bottom: 75px;
+        bottom: 87px;
     }
     #push{
+        text-align: center;
         position: fixed;
-        bottom: 75px;
+        bottom: 95px;
         right: 1%;
     }
     ion-item {
-        img {
-            height: 25px;
-            width: 25px;
-            margin-left: 12%;
+        img{
+            height: 30px;
+            width: 30px;
+            margin-left: 13%;
         }
         .heart {
             background:url(../../assets/imgs/web_heart_animation.png);
             background-position:left;
             background-repeat:no-repeat;
             height:30px;
-            width:100px;
+            width:90px;
             position:absolute;
             left:60%;
-            top:15px;
+            top:10px;
             background-size:2900%;
             float:left;
         }
