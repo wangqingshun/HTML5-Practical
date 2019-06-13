@@ -18,34 +18,37 @@ page-comment {
         margin-left: 2%;
         width: 200px;
     } 
-    .share{
-        margin: 15% 0 3% 2%;
-        font-size: 18px;;
-    }
     .article{
         margin: 0;
         padding: 0;
-        li{
-            height: 110px;
-            width: 98%;
-            margin-left: 1%;
-            border: 1px solid gainsboro;
+        .item{
+            height: 150px;
+            width: 94%;
+            margin: 3%;
+            // background-color: red;
         }
-        div{
-            float: left;
+        .share{
+            font-size: 18px;
         }
         .artimg{
             width: 40%;
             height: 110px;
             img{
                 height: 100%;
+                width: 100%;
+                line-height: 110px;
             }
         }
         .artcon{
             width: 60%;
             height: 110px;
+            float:right;
             p{
                 margin-left: 5px;
+                font-size: 20px;
+                text-align: center;
+                position: relative;
+                bottom: 100px;
             }
         }
     }

@@ -14,14 +14,18 @@
     </li>
     <li id="button"><button>回复</button></li>
   </ul>
-  <div class="share">回复<a>@2344</a>:对的</div>
   <ul class="article">
-    <li (click)="goArticle()">
-      <div class="artimg"><img src="assets/imgs/a9.jpg" alt=""></div>
-      <div class="artcon">
-        <h3>菜名</h3>
-        <p>内容简介</p>
-      </div>
+    <li (click)="goArticle()" *ngFor="let item of array" class="item">
+      <div class="share">{{item}}</div>
+      <ul>
+        <li *ngFor="let index of arr">
+          <div class="artimg"><img src="{{index.src}}" alt=""></div>
+          <div class="artcon">
+            <h3>{{index.name}}</h3>
+            <p>{{index.jianjie}}</p>
+          </div>
+        </li>
+      </ul>
     </li>
   </ul>
 </ion-content>
